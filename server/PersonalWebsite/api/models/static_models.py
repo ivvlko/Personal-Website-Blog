@@ -21,12 +21,3 @@ class Education(models.Model):
 class SkillSet(models.Model):
     overall_skill = models.CharField(max_length=200)
     technologies = models.CharField(max_length=1000)
-
-
-
-
-
-
-
-
-    
