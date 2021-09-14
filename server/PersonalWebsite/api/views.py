@@ -1,7 +1,7 @@
 from api.models import *
 from api.serializers import *
 from rest_framework.generics import RetrieveUpdateDestroyAPIView,ListCreateAPIView
-from rest_framework.permissions import IsAdminUser, IsAuthenticated
+from rest_framework.permissions import IsAdminUser, AllowAny
 
 from rest_framework.permissions import IsAdminUser, SAFE_METHODS
 
@@ -56,3 +56,24 @@ class SkillSetViewDetails(ListCreateAPIView):
     serializer_class = SkillSetSerializer
     permission_classes = [IsAdminUserOrReadOnly]
 
+
+class ArticleView(ListCreateAPIView):
+    queryset = Article.objects.all()
+    serializer_class = ArticleSerializer
+    permission_classes = [IsAdminUserOrReadOnly]
+
+class ArticleViewDetails(RetrieveUpdateDestroyAPIView):
+    queryset = Article.objects.all()
+    serializer_class = ArticleSerializer
+    permission_classes = [IsAdminUserOrReadOnly]
+
+
+class CommentView(ListCreateAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
+    permission_classes = [AllowAny]
+
+class CommentViewDetails(RetrieveUpdateDestroyAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
+    permission_classes = [AllowAny]

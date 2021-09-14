@@ -20,3 +20,13 @@ class SkillSetSerializer(serializers.ModelSerializer):
     class Meta:
         model = SkillSet
         fields = '__all__'
+
+class ArticleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Article
+        fields = '__all__'
+
+class CommentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comment
+        fields = '__all__'

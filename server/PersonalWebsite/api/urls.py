@@ -10,4 +10,8 @@ urlpatterns = [
     path('api/static/education/<int:pk>', EducationViewDetails.as_view()),
     path('api/static/skillset/', SkillSetView.as_view()),
     path('api/static/skillset/<int:pk>', SkillSetViewDetails.as_view()),
+    path('api/articles/', ArticleView.as_view()),
+    path('api/articles/<int:pk>', ArticleViewDetails.as_view()),
+    path('api/comments/', CommentView.as_view()),
+    path('api/comments/<int:pk>', CommentViewDetails.as_view()),
 ]
