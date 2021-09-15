@@ -30,3 +30,8 @@ class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
         fields = '__all__'
+
+class WorkRequestSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = WorkRequest
+        fields = '__all__'

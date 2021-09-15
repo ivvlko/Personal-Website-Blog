@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.openid',
     'rest_auth.registration',
     'rest_framework.authtoken',
+    'phone_field',
     
 ]
 ## Django Rest Settings

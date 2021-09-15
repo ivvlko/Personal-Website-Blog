@@ -14,4 +14,8 @@ urlpatterns = [
     path('api/articles/<int:pk>', ArticleViewDetails.as_view()),
     path('api/comments/', CommentView.as_view()),
     path('api/comments/<int:pk>', CommentViewDetails.as_view()),
+    path('api/work-request/', CreateWorkRequestView.as_view()),
+    path('api/work-requests-list/', GetWorkRequestListsView.as_view()),
+    path('api/work-requests/<int:pk>', GetWorkRequestViewDetails.as_view()),
+
 ]

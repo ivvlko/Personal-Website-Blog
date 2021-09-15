@@ -1,6 +1,6 @@
 from api.models import *
 from api.serializers import *
-from rest_framework.generics import RetrieveUpdateDestroyAPIView,ListCreateAPIView
+from rest_framework.generics import RetrieveUpdateDestroyAPIView, ListCreateAPIView, CreateAPIView, ListAPIView
 from rest_framework.permissions import IsAdminUser, AllowAny
 
 from rest_framework.permissions import IsAdminUser, SAFE_METHODS
@@ -77,3 +77,18 @@ class CommentViewDetails(RetrieveUpdateDestroyAPIView):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
     permission_classes = [AllowAny]
+
+class CreateWorkRequestView(CreateAPIView):
+    queryset = WorkRequest.objects.all()
+    serializer_class = WorkRequestSerializer
+    permission_classes = [AllowAny]
+
+class GetWorkRequestListsView(ListAPIView):
+    queryset = WorkRequest.objects.all()
+    serializer_class = WorkRequestSerializer
+    permission_classes = [IsAdminUser]
+
+class GetWorkRequestViewDetails(RetrieveUpdateDestroyAPIView):
+    queryset = WorkRequest.objects.all()
+    serializer_class = WorkRequestSerializer
+    permission_classes = [IsAdminUser]
