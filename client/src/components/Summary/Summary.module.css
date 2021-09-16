@@ -1,0 +1,10 @@
+.summaryHeader{
+    text-align: center;
+    font-size: 150%;
+    color: salmon;
+}
+
+.summarySection{
+    margin-top: 20px;
+    background-image: url("../../static_files/summary_background.jpeg")
+}

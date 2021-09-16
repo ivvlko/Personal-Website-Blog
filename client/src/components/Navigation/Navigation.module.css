@@ -1,0 +1,18 @@
+.navigation {
+    background-color: rgb(78, 42, 89);
+}
+
+.selected{
+    opacity: 0.5;
+}
+
+.navigationList{
+    padding: 20px;
+}
+
+.navigationItem{
+    margin: 20px;
+    color: salmon;
+    text-decoration: none;
+    font-size: 150%;
+}

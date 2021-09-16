@@ -1,6 +1,7 @@
 from django.db import models
 
 class SummarySection(models.Model):
+    picture = models.ImageField()
     paragraph_with_short_bio = models.CharField(max_length=5000)
 
 
