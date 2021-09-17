@@ -1,5 +1,6 @@
 import styles from './Summary.module.css';
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
+import getStaticEndpoint from '../../services/getStatic';
 
 const Summary = () => {
 
@@ -7,14 +8,16 @@ const Summary = () => {
 
     useEffect(
         () => {
-            const summaryUrl = 'http://127.0.0.1:8000/api/static/summary/2';
-            fetch(summaryUrl)
-            .then(res => res.json())
-            .then((data) => {
-                setSummary({image: data.image, shortDescription: data.paragraph_with_short_bio})
-            } );
+            const summaryPath = 'summary/2';
+            getStaticEndpoint(summaryPath)
+                .then(data => setSummary(
+                    {
+                        image: data.picture,
+                        shortDescription: data.paragraph_with_short_bio
+                    }
+                ));
         }
-    , [])
+        , [])
 
     return (
         <section className={styles.summarySection}>

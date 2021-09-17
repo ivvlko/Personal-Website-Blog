@@ -1,16 +1,14 @@
-const WorkExperience = () => {
+import styles from './WorkExperienceList.module.css';
 
+const WorkExperience = (props) => {
     return (
-    <section>
-        
-        <p className="work-experience-item"></p>
-        <p className="work-experience-item"></p>
-        <p className="work-experience-item"></p>
-        <p className="work-experience-item"></p>
-
+    <section className={styles.workExperienceElement}>
+        <h2>Role: {props.role}</h2>
+        <h2>Company: {props.company}</h2>
+        <h2>Time:{props.dates}</h2>
+        <h2>Main Responsibilities: {props.shortDescription}</h2>
     </section>
     )
-
 }
 
 export default WorkExperience;
