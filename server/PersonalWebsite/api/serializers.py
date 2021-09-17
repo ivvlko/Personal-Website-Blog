@@ -16,9 +16,9 @@ class EducationSerializer(serializers.ModelSerializer):
         model = Education
         fields = '__all__'
 
-class SkillSetSerializer(serializers.ModelSerializer):
+class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
-        model = SkillSet
+        model = Project
         fields = '__all__'
 
 class ArticleSerializer(serializers.ModelSerializer):

@@ -33,7 +33,7 @@ class WorkExperienceView(ListCreateAPIView):
 
 class WorkExperienceViewDetails(RetrieveUpdateDestroyAPIView):
     queryset = WorkExperience.objects.all()
-    serializer_class = SummarySerializer
+    serializer_class = WorkExperienceSerializer
     permission_classes = [IsAdminUserOrReadOnly]
 
 class EducationView(ListCreateAPIView):
@@ -46,14 +46,14 @@ class EducationViewDetails(RetrieveUpdateDestroyAPIView):
     serializer_class = EducationSerializer
     permission_classes = [IsAdminUserOrReadOnly]
 
-class SkillSetView(ListCreateAPIView):
-    queryset = SkillSet.objects.all()
-    serializer_class = SkillSetSerializer
+class ProjectView(ListCreateAPIView):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
     permission_classes = [IsAdminUserOrReadOnly]
 
-class SkillSetViewDetails(ListCreateAPIView):
-    queryset = SkillSet.objects.all()
-    serializer_class = SkillSetSerializer
+class ProjectViewDetails(ListCreateAPIView):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
     permission_classes = [IsAdminUserOrReadOnly]
 
 
