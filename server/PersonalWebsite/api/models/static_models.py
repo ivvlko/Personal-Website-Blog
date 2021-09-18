@@ -1,7 +1,7 @@
 from django.db import models
 
 class SummarySection(models.Model):
-    picture = models.ImageField()
+    picture = models.ImageField(upload_to='profile_pictures')
     paragraph_with_short_bio = models.TextField(max_length=5000)
 
 
@@ -21,7 +21,7 @@ class Education(models.Model):
 
 class Project(models.Model):
     name = models.CharField(max_length=200)
-    image = models.ImageField()
+    image = models.ImageField(upload_to='project_pictures')
     technologies = models.TextField(max_length=500)
     source_code = models.CharField(max_length=1000)
     url = models.CharField(max_length=100)

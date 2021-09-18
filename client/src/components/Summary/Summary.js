@@ -22,6 +22,7 @@ const Summary = () => {
     return (
         <section className={styles.summarySection}>
             <h1 className={styles.summaryHeader}>Howdy? My name is Ivan. Welcome to my place!</h1>
+            <img src={summary.image} alt="Me"/>
             <p>{summary.shortDescription}</p>
         </section>
     )
