@@ -1,0 +1,17 @@
+.projectList{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.projectItem{
+    max-width: 45%;
+    background-color: deeppink;
+    color: gold;
+    padding: 5px;
+    margin-top: 10px;
+    word-wrap: break-word;
+}
+
+.projectImage{
+    max-width: 100%;
+}

@@ -24,4 +24,4 @@ class Project(models.Model):
     image = models.ImageField(upload_to='project_pictures')
     technologies = models.TextField(max_length=500)
     source_code = models.CharField(max_length=1000)
-    url = models.CharField(max_length=100)
+    url = models.CharField(max_length=100, blank=True)

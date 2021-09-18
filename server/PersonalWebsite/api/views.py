@@ -51,7 +51,7 @@ class ProjectView(ListCreateAPIView):
     serializer_class = ProjectSerializer
     permission_classes = [IsAdminUserOrReadOnly]
 
-class ProjectViewDetails(ListCreateAPIView):
+class ProjectViewDetails(RetrieveUpdateDestroyAPIView):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
     permission_classes = [IsAdminUserOrReadOnly]
