@@ -1,8 +1,8 @@
 let baseStaticUrl = 'http://127.0.0.1:8000/api/static/';
 
-function getStaticEndpoint(particularEndpoint){
+function getStaticModelsData(particularEndpoint){
     return fetch(baseStaticUrl + particularEndpoint)
             .then(res => res.json());
 }
 
-export default getStaticEndpoint
+export default getStaticModelsData;

@@ -1,0 +1,12 @@
+.educationHeader {
+    text-align: center;
+    background-color: darkslateblue;
+    color: floralwhite;
+}
+
+.educationItem {
+    background-color: gold;
+    color: purple;
+    padding: 5px;
+    margin-top: 10px;
+}

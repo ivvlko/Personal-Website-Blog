@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react';
-import getStaticEndpoint from '../../services/getStatic';
+import getStaticModelsData from '../../services/getStatic';
 import WorkExperience from './WorkExperience';
 import styles from './WorkExperienceList.module.css';
+
+const experiencesListEndpoint = 'work-experience/';
 
 const WorkExperiences = () => {
 
     const [workExperiences, setWorkExperiences] = useState([]);
     useEffect(() => {
 
-        const experiencesPath = 'work-experience/';
-        getStaticEndpoint(experiencesPath)
+        
+        getStaticModelsData(experiencesListEndpoint)
             .then(data => setWorkExperiences(data))
 
     }, [])

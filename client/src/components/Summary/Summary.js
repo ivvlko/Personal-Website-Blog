@@ -1,6 +1,6 @@
 import styles from './Summary.module.css';
 import { useEffect, useState } from 'react';
-import getStaticEndpoint from '../../services/getStatic';
+import getStaticModelsData from '../../services/getStatic';
 
 const Summary = () => {
 
@@ -9,7 +9,7 @@ const Summary = () => {
     useEffect(
         () => {
             const summaryPath = 'summary/2';
-            getStaticEndpoint(summaryPath)
+            getStaticModelsData(summaryPath)
                 .then(data => setSummary(
                     {
                         image: data.picture,
