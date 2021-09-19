@@ -1,19 +1,29 @@
 import './App.css';
 import Navigation from './components/Navigation/Navigation';
-import Summary from './components/Summary/Summary';
-import WorkExperiences from './components/WorkExperience/WorkExperienceList';
-import EducationList from './components/Education/EducationList';
-import ProjectsList from './components/Project/ProjectsList';
+import AboutPage from './components/AboutPage/AboutPage';
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
 
       <Navigation />
-      <Summary />
-      <WorkExperiences />
-      <EducationList />
-      <ProjectsList />
+
+      <Switch>
+        <Route exact path='/'>
+          <AboutPage />
+        </Route>
+
+        <Route exact path='/blog'>
+          <h1>Blog</h1>
+        </Route>
+
+        <Route exact path='/contact'>
+          <h1>Contact</h1>
+        </Route>
+
+      </Switch>
+
     </div>
   );
 }

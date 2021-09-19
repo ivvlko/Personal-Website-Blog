@@ -1,6 +1,6 @@
 import styles from './Summary.module.css';
 import { useEffect, useState } from 'react';
-import getStaticModelsData from '../../services/getStatic';
+import getStaticModelsData from '../../../services/getStatic';
 
 const Summary = () => {
 

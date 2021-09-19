@@ -1,6 +1,6 @@
 import Project from "./Project";
 import { useEffect, useState } from 'react';
-import getStaticModelsData from "../../services/getStatic";
+import getStaticModelsData from "../../../services/getStatic";
 import styles from './Project.module.css';
 
 const projectsListEndpoint = 'projects/';

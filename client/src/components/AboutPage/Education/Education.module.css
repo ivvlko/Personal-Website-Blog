@@ -9,4 +9,11 @@
     color: purple;
     padding: 5px;
     margin-top: 10px;
+    width: 45%;
+}
+
+.educationContainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }

@@ -1,0 +1,21 @@
+.workExperienceElement{
+    padding: 10px 5px;
+    margin: 10px;
+    background-color: darkseagreen;
+    width: 45%;
+}
+
+.workExperienceHeader{
+    background-color: red;
+}
+
+.experiencesContainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+}
+
+.workExperienceElement * {
+    padding-top: 10px;
+}
