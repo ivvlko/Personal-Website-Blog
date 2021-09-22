@@ -2,8 +2,6 @@ from django.urls import path, include
 from api.views import *
 
 urlpatterns = [
-    path('api/session/', session_view, name='session'),
-    path('api/csrf/', get_csrf, name='csrf'),
     path('api/static/summary/', SummaryView.as_view()),
     path('api/static/summary/<int:pk>', SummaryViewDetails.as_view()),
     path('api/static/work-experience/', WorkExperienceView.as_view()),

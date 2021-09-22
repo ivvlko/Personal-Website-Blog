@@ -16,3 +16,8 @@
     text-decoration: none;
     font-size: 150%;
 }
+
+.navigationItem:hover{
+    cursor: pointer;
+    opacity: 0.4;
+}
