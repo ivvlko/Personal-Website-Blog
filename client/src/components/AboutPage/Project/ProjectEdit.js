@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import getStaticModelsData from "../../../services/getStatic";
 import AuthorizedPatchRequests from "../../../services/PatchRequests";
+import { withRouter } from "react-router";
 
 const ProjectEdit = (props) => {
 
@@ -69,4 +70,4 @@ const ProjectEdit = (props) => {
 
 }
 
-export default ProjectEdit;
+export default withRouter(ProjectEdit);

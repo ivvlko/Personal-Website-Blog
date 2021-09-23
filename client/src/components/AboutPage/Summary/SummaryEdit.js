@@ -3,7 +3,6 @@ import getStaticModelsData from "../../../services/getStatic";
 import AuthorizedPatchRequests from "../../../services/PatchRequests";
 import { withRouter } from 'react-router-dom';
 
-
 const SummaryEdit = (props) => {
 
     const [summary, setSummary] = useState([]);

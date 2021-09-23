@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import getStaticModelsData from "../../../services/getStatic";
 import AuthorizedPatchRequests from "../../../services/PatchRequests";
+import { withRouter } from "react-router";
 
 const EducationEdit = (props) => {
 
@@ -63,4 +64,4 @@ const EducationEdit = (props) => {
 
 }
 
-export default EducationEdit;
+export default withRouter(EducationEdit);

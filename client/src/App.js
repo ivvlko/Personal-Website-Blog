@@ -14,6 +14,7 @@ import WorkExperienceEdit from './components/AboutPage/WorkExperience/WorkExperi
 import EducationEdit from './components/AboutPage/Education/EducationEdit';
 import ProjectEdit from './components/AboutPage/Project/ProjectEdit';
 import ErrorPageRights from './components/ErrorPages/NoRights';
+import ArticleEdit from './components/BlogPage/Article/ArticleEdit';
 
 
 function App() {
@@ -30,41 +31,32 @@ function App() {
         <Navigation />
 
         <Switch>
-          <Route exact path='/'>
-            <AboutPage />
-          </Route>
-
-          <Route exact path='/blog'>
-            <BlogPage />
-          </Route>
-
-          <Route exact path='/blog/article/:id' component={ArticleDetailed}>
+          <Route exact path='/' component={AboutPage}/>
             
-          </Route>
+          <Route exact path='/blog' component={BlogPage}/>
+            
 
-          <Route exact path='/edit/summary/2' component={(authenticated && localStorage.getItem('username') === 'admin')? SummaryEdit : ErrorPageRights}>
-          </Route>
+          <Route exact path='/blog/article/:id' component={ArticleDetailed}/>
+            
 
-          <Route exact path='/edit/work-experience/:id' component={(authenticated && localStorage.getItem('username') === 'admin')? WorkExperienceEdit : ErrorPageRights}>
-          </Route>
+          <Route exact path='/edit/summary/2' component={(authenticated && localStorage.getItem('username') === 'admin')? SummaryEdit : ErrorPageRights}/>
 
-          <Route exact path='/edit/education/:id' component={(authenticated && localStorage.getItem('username') === 'admin')? EducationEdit : ErrorPageRights}>
-          </Route>
+          <Route exact path='/edit/work-experience/:id' component={(authenticated && localStorage.getItem('username') === 'admin')? WorkExperienceEdit : ErrorPageRights}/>
 
-          <Route exact path='/edit/projects/:id' component={(authenticated && localStorage.getItem('username') === 'admin')? ProjectEdit : ErrorPageRights}>
-          </Route>
+          <Route exact path='/edit/education/:id' component={(authenticated && localStorage.getItem('username') === 'admin')? EducationEdit : ErrorPageRights}/>
+
+          <Route exact path='/edit/projects/:id' component={(authenticated && localStorage.getItem('username') === 'admin')? ProjectEdit : ErrorPageRights}/>
+
+          <Route exact path='/edit/articles/:id' component={(authenticated && localStorage.getItem('username') === 'admin')? ArticleEdit : ErrorPageRights}/>
 
           <Route exact path='/contact'>
             <h1>Contact</h1>
           </Route>
 
-          <Route exact path='/login'>
-            <Login></Login>
-          </Route>
+          <Route exact path='/login' component={Login}/>
 
-          <Route exact path='/work-requests'>
-            <WorkRequestsList></WorkRequestsList>
-          </Route>
+          <Route exact path='/work-requests' component={WorkRequestsList}/>
+
 
         </Switch>
 

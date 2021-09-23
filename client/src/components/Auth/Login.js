@@ -1,14 +1,13 @@
 import React from 'react';
 import { useContext, useState } from 'react';
-import { useHistory } from "react-router-dom";
 import LoggedContext from './LoggedContext';
+import { withRouter } from 'react-router';
 
-const Login = () => {
+const Login = ({history}) => {
 
     const { setAuthenticated } = useContext(LoggedContext);
     const handleLogin = () => setAuthenticated(true);
     const [invalidCredentials, setInvalidCredentials] = useState(false);
-    let history = useHistory();
 
     const onSubmitLoginForm = (e) => {
         e.preventDefault();
@@ -59,4 +58,4 @@ const Login = () => {
 }
 
 
-export default Login;
+export default withRouter(Login);

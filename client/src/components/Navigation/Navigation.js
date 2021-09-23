@@ -2,18 +2,17 @@ import { NavLink } from 'react-router-dom';
 import styles from './Navigation.module.css';
 import { useContext } from 'react';
 import LoggedContext from '../Auth/LoggedContext';
-import { useHistory } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
 
-const Navigation = () => {
-    const history = useHistory();
+const Navigation = (props) => {
     const { setAuthenticated } = useContext(LoggedContext);
     const context = useContext(LoggedContext);
 
     const handleLogout = () => {
         setAuthenticated(false)
         localStorage.clear();
-        history.push("/");
+        props.history.push("/");
     };
 
     return (
@@ -36,4 +35,4 @@ const Navigation = () => {
 
 }
 
-export default Navigation;
+export default withRouter(Navigation);

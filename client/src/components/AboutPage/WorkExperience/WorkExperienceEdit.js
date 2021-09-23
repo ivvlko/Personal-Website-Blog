@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import getStaticModelsData from "../../../services/getStatic";
 import AuthorizedPatchRequests from "../../../services/PatchRequests";
+import { withRouter } from "react-router";
 
 const WorkExperienceEdit = (props) => {
 
@@ -61,8 +62,6 @@ const WorkExperienceEdit = (props) => {
         </form>
     )
 
-
-
 }
 
-export default WorkExperienceEdit;
+export default withRouter(WorkExperienceEdit);
