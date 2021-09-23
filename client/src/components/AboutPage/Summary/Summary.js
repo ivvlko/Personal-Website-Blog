@@ -1,11 +1,11 @@
 import styles from './Summary.module.css';
 import { useEffect, useState } from 'react';
 import getStaticModelsData from '../../../services/getStatic';
+import { NavLink } from 'react-router-dom';
 
-const Summary = () => {
+const Summary = (props) => {
 
     const [summary, setSummary] = useState([]);
-
     useEffect(
         () => {
             const summaryPath = 'summary/2';
@@ -24,6 +24,7 @@ const Summary = () => {
             <h1 className={styles.summaryHeader}>Howdy? My name is Ivan. Welcome to my place!</h1>
             <img src={summary.image} alt="Me"/>
             <p>{summary.shortDescription}</p>
+            <NavLink to='/edit/summary/2'>Edit</NavLink>
         </section>
     )
 

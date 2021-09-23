@@ -7,6 +7,7 @@ const WorkExperience = (props) => {
         <h2>Company: {props.company}</h2>
         <h2>Time:{props.dates}</h2>
         <h2>Main Responsibilities: {props.shortDescription}</h2>
+        <button>Edit</button>
     </section>
     )
 }

@@ -9,6 +9,7 @@ import Login from './components/Auth/Login';
 import WorkRequestsList from './components/WorkRequests/WorkRequestsList';
 import LoggedContext from './components/Auth/LoggedContext';
 import ArticleDetailed from './components/BlogPage/Article/ArticleDetailed';
+import SummaryEdit from './components/AboutPage/Summary/SummaryEdit';
 
 
 function App() {
@@ -35,6 +36,9 @@ function App() {
 
           <Route exact path='/blog/article/:id' component={ArticleDetailed}>
             
+          </Route>
+
+          <Route exact path='/edit/summary/2' component={SummaryEdit}>
           </Route>
 
           <Route exact path='/contact'>

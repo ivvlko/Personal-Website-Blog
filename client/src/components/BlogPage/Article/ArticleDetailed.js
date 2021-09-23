@@ -17,7 +17,7 @@ const ArticleDetailed = ({match}) => {
 
         <article>
             <h2>{state.title}</h2>
-            <h3>{state.dateCreated}</h3>
+            <h3>{state.date_created}</h3>
             <img src={state.image} alt="title"/>
             <p>{state.text}</p>
         </article>)

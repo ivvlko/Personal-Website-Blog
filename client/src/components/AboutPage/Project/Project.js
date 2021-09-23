@@ -10,7 +10,7 @@ const Project = (props) => {
        <h2>Technologies: {props.technologies}</h2>
        <h2>Source code: {props.sourceCode}</h2>
        <h2>Url:{props.url ? props.url : 'Not Deployed'}</h2>
-
+       <button>Edit</button>
     </section>
     )
 
