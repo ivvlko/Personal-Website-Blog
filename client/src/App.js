@@ -1,14 +1,17 @@
 import './App.css';
+import { useState, useEffect } from 'react';
+import { Switch, Route } from 'react-router-dom';
+
 import Navigation from './components/Navigation/Navigation';
 import AboutPage from './components/AboutPage/AboutPage';
-import { Switch, Route } from 'react-router-dom';
+import BlogPage from './components/BlogPage/BlogPage';
 import Login from './components/Auth/Login';
 import WorkRequestsList from './components/WorkRequests/WorkRequestsList';
 import LoggedContext from './components/Auth/LoggedContext';
-import {useState, useEffect} from 'react';
+
 
 function App() {
-  
+
   const [authenticated, setAuthenticated] = useState(false);
 
   useEffect(() => {
@@ -26,7 +29,7 @@ function App() {
           </Route>
 
           <Route exact path='/blog'>
-            <h1>Blog</h1>
+            <BlogPage />
           </Route>
 
           <Route exact path='/contact'>
