@@ -1,9 +1,13 @@
 import styles from './Summary.module.css';
+import { useContext } from 'react';
+import LoggedContext from '../../Auth/LoggedContext';
 import { useEffect, useState } from 'react';
 import getStaticModelsData from '../../../services/getStatic';
 import { NavLink } from 'react-router-dom';
 
 const Summary = (props) => {
+
+    const {authenticated} = useContext(LoggedContext)
 
     const [summary, setSummary] = useState([]);
     useEffect(
@@ -24,7 +28,7 @@ const Summary = (props) => {
             <h1 className={styles.summaryHeader}>Howdy? My name is Ivan. Welcome to my place!</h1>
             <img src={summary.image} alt="Me"/>
             <p>{summary.shortDescription}</p>
-            <NavLink to='/edit/summary/2'>Edit</NavLink>
+            {(authenticated && localStorage.getItem('username') == 'admin') ? <NavLink to='/edit/summary/2'>Edit</NavLink> : null}
         </section>
     )
 

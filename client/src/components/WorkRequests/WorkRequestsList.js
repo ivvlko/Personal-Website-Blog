@@ -1,6 +1,7 @@
 import WorkRequest from "./WorkRequest";
 import { useState, useEffect } from 'react';
 import refreshToken from "../Auth/RefreshToken";
+import ErrorPageRights from '../ErrorPages/NoRights';
 
 const workRequestsEndpoint = 'http://127.0.0.1:8000/api/work-requests-list/'
 
@@ -33,9 +34,8 @@ const WorkRequestsList = () => {
 
 
     if (hasErrors.hasError === true) {
-        return <div>
-            <h1 style={{ 'color': "red" }}>You have No Rights to Access This Page</h1>
-        </div>
+        return ErrorPageRights();
+        
     } else {
         return (
             <section>

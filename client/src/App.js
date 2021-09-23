@@ -10,6 +10,10 @@ import WorkRequestsList from './components/WorkRequests/WorkRequestsList';
 import LoggedContext from './components/Auth/LoggedContext';
 import ArticleDetailed from './components/BlogPage/Article/ArticleDetailed';
 import SummaryEdit from './components/AboutPage/Summary/SummaryEdit';
+import WorkExperienceEdit from './components/AboutPage/WorkExperience/WorkExperienceEdit';
+import EducationEdit from './components/AboutPage/Education/EducationEdit';
+import ProjectEdit from './components/AboutPage/Project/ProjectEdit';
+import ErrorPageRights from './components/ErrorPages/NoRights';
 
 
 function App() {
@@ -38,7 +42,16 @@ function App() {
             
           </Route>
 
-          <Route exact path='/edit/summary/2' component={SummaryEdit}>
+          <Route exact path='/edit/summary/2' component={(authenticated && localStorage.getItem('username') === 'admin')? SummaryEdit : ErrorPageRights}>
+          </Route>
+
+          <Route exact path='/edit/work-experience/:id' component={(authenticated && localStorage.getItem('username') === 'admin')? WorkExperienceEdit : ErrorPageRights}>
+          </Route>
+
+          <Route exact path='/edit/education/:id' component={(authenticated && localStorage.getItem('username') === 'admin')? EducationEdit : ErrorPageRights}>
+          </Route>
+
+          <Route exact path='/edit/projects/:id' component={(authenticated && localStorage.getItem('username') === 'admin')? ProjectEdit : ErrorPageRights}>
           </Route>
 
           <Route exact path='/contact'>

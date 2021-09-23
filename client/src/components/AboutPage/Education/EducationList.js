@@ -22,6 +22,7 @@ const EducationList = () => {
             <section className={styles.educationContainer}>
                 {educationList.map(curr => <Education key={curr.id}
                     degree={curr.degree}
+                    id = {curr.id}
                     school={curr.school}
                     dates={curr.dates}
                     shortDescription={curr.short_description} />)}

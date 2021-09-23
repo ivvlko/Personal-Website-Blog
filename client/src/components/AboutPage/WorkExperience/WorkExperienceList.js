@@ -22,6 +22,7 @@ const WorkExperiences = () => {
 
                 {workExperiences.map((current) => <WorkExperience
                     key={current.id + current.company + current.dates}
+                    id = {current.id}
                     role={current.role}
                     company={current.company}
                     dates={current.dates}

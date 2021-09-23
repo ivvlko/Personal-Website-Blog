@@ -24,6 +24,7 @@ const ProjectsList = () => {
                     name={curr.name}
                     image={curr.image}
                     technologies={curr.technologies}
+                    id={curr.id}
                     sourceCode={curr.source_code} />)}
             </section>
         </div>
