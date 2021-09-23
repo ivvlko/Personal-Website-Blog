@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const Article = (props) => {
 
     return (
@@ -5,8 +7,8 @@ const Article = (props) => {
         <article>
             <h2>{props.title}</h2>
             <img src={props.image} alt="article"/>
-            <span>{props.dateCreated}</span>
-            <p>{props.text}</p>
+            <p>{props.text.slice(0, 20)} ...</p>
+            <NavLink to={`/blog/article/${props.id}`}>Full Article</NavLink>
         </article>)
 
 }

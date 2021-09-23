@@ -8,6 +8,7 @@ import BlogPage from './components/BlogPage/BlogPage';
 import Login from './components/Auth/Login';
 import WorkRequestsList from './components/WorkRequests/WorkRequestsList';
 import LoggedContext from './components/Auth/LoggedContext';
+import ArticleDetailed from './components/BlogPage/Article/ArticleDetailed';
 
 
 function App() {
@@ -30,6 +31,10 @@ function App() {
 
           <Route exact path='/blog'>
             <BlogPage />
+          </Route>
+
+          <Route exact path='/blog/article/:id' component={ArticleDetailed}>
+            
           </Route>
 
           <Route exact path='/contact'>

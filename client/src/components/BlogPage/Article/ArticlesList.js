@@ -22,12 +22,16 @@ const ArticlesList = () => {
             <section>
                 {articles.map(art => <Article
                                         key={art.id}
+                                        id={art.id}
                                         title={art.title}
                                         image={art.image}
-                                        dateCreated={art.date_created}
                                         text={art.text}>
                                     </Article>)}
+
+                
+
             </section>
+            
         </div>
 
     )
