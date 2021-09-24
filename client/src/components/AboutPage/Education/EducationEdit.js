@@ -1,20 +1,26 @@
 import { useEffect, useState } from "react";
-import getStaticModelsData from "../../../services/getStatic";
-import AuthorizedPatchRequests from "../../../services/PatchRequests";
+import FreeRequests from "../../../services/FreeRequests";
 import { withRouter } from "react-router";
+import AuthorizedCrud from "../../../services/AuthorizedCrud";
 
 const EducationEdit = (props) => {
 
     const [education, setEducation] = useState([]);
     const id = props.match.params.id;
-    const summaryPath = `education/${id}`;
 
-    const patchEndpoint = `http://127.0.0.1:8000/api/static/education/${id}`;
+    const endpoint = `http://127.0.0.1:8000/api/static/education/${id}`;
+
+    const deleteElement = (e) => {
+        e.preventDefault();
+        AuthorizedCrud('DELETE', endpoint);
+        props.history.push('/')
+
+    }
 
     useEffect(
         () => {
 
-            getStaticModelsData(summaryPath)
+            FreeRequests('GET', endpoint)
                 .then(data => setEducation(
                     {
                         degree: data.degree,
@@ -35,7 +41,7 @@ const EducationEdit = (props) => {
                                           "school": e.target[1].value,
                                           "dates": e.target[2].value,
                                           "short_description": e.target[3].value })
-        AuthorizedPatchRequests(patchEndpoint, bodyToSend);
+        AuthorizedCrud('PATCH', endpoint, bodyToSend);
 
         props.history.push('/');
 
@@ -59,6 +65,8 @@ const EducationEdit = (props) => {
             </textarea>
 
             <button>Edit</button>
+            <br/>
+            <button onClick={deleteElement}>Delete</button>
         </form>
     )
 

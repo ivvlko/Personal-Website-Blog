@@ -15,6 +15,10 @@ import EducationEdit from './components/AboutPage/Education/EducationEdit';
 import ProjectEdit from './components/AboutPage/Project/ProjectEdit';
 import ErrorPageRights from './components/ErrorPages/NoRights';
 import ArticleEdit from './components/BlogPage/Article/ArticleEdit';
+import AddWorkExperience from './components/AboutPage/WorkExperience/AddWorkExperience';
+import AddProject from './components/AboutPage/Project/AddProject';
+import AddEducation from './components/AboutPage/Education/AddEducation';
+import AddArticle from './components/BlogPage/Article/AddArticle';
 
 
 function App() {
@@ -48,6 +52,11 @@ function App() {
           <Route exact path='/edit/projects/:id' component={(authenticated && localStorage.getItem('username') === 'admin')? ProjectEdit : ErrorPageRights}/>
 
           <Route exact path='/edit/articles/:id' component={(authenticated && localStorage.getItem('username') === 'admin')? ArticleEdit : ErrorPageRights}/>
+
+          <Route exact path='/add/experience' component={(authenticated && localStorage.getItem('username') === 'admin')? AddWorkExperience : ErrorPageRights}/>
+          <Route exact path='/add/project' component={(authenticated && localStorage.getItem('username') === 'admin')? AddProject : ErrorPageRights}/>
+          <Route exact path='/add/education' component={(authenticated && localStorage.getItem('username') === 'admin')? AddEducation : ErrorPageRights}/>
+          <Route exact path='/add/article' component={(authenticated && localStorage.getItem('username') === 'admin')? AddArticle : ErrorPageRights}/>
 
           <Route exact path='/contact'>
             <h1>Contact</h1>

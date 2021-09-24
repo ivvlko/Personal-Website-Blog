@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import getSingleArticle from '../../../services/getSingleArticle';
+import FreeRequests from "../../../services/FreeRequests";
 
 const ArticleDetailed = ({match}) => {
 
@@ -8,7 +8,7 @@ const ArticleDetailed = ({match}) => {
 
     useEffect(() => {
 
-        getSingleArticle(currentId)
+        FreeRequests('GET', `http://127.0.0.1:8000/api/articles/${currentId}`)
             .then(res => setState(res))
 
     }, [])
@@ -18,7 +18,7 @@ const ArticleDetailed = ({match}) => {
         <article>
             <h2>{state.title}</h2>
             <h3>{state.date_created}</h3>
-            <img src={state.image} alt="title"/>
+            <img src={state.image_url} alt="title"/>
             <p>{state.text}</p>
         </article>)
 

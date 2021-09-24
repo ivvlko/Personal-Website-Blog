@@ -1,16 +1,19 @@
-import { useEffect, useState } from 'react';
-import getStaticModelsData from '../../../services/getStatic';
+import { useEffect, useState, useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+import LoggedContext from '../../Auth/LoggedContext';
+import FreeRequests from '../../../services/FreeRequests';
 import WorkExperience from './WorkExperience';
 import styles from './WorkExperienceList.module.css';
 
-const experiencesListEndpoint = 'work-experience/';
 
-const WorkExperiences = () => {
+const WorkExperiences = (props) => {
 
+    const endpoint = 'http://127.0.0.1:8000/api/static/work-experience/';
+    const {authenticated} = useContext(LoggedContext)
     const [workExperiences, setWorkExperiences] = useState([]);
 
     useEffect(() => {
-        getStaticModelsData(experiencesListEndpoint)
+        FreeRequests('GET', endpoint)
             .then(data => setWorkExperiences(data))
 
     }, [])
@@ -29,6 +32,7 @@ const WorkExperiences = () => {
                     shortDescription={current.short_description}
                 />)}
             </section>
+            {(authenticated && localStorage.getItem('username') == 'admin') ? <NavLink to='/add/experience'>Add</NavLink> : null}
         </div>
 
     )

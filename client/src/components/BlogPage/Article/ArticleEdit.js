@@ -1,19 +1,25 @@
 import { useEffect, useState } from "react";
-import getSingleArticle from "../../../services/getSingleArticle";
-import AuthorizedPatchRequests from "../../../services/PatchRequests";
+import FreeRequests from "../../../services/FreeRequests";
 import { withRouter } from "react-router";
+import AuthorizedCrud from "../../../services/AuthorizedCrud";
 
 const EducationEdit = (props) => {
 
     const [article, setArticle] = useState([]);
     const id = props.match.params.id;
 
-    const patchEndpoint = `http://127.0.0.1:8000/api/articles/${id}`;
+    const endpoint = `http://127.0.0.1:8000/api/articles/${id}`;
+
+    const deleteElement = (e) => {
+        e.preventDefault();
+        AuthorizedCrud('DELETE', endpoint);
+        props.history.push('/blog')
+    }
 
     useEffect(
         () => {
 
-            getSingleArticle(id)
+            FreeRequests('GET', endpoint)
                 .then(data => setArticle(
                     {
                         title: data.title,
@@ -30,8 +36,9 @@ const EducationEdit = (props) => {
 
         let bodyToSend = JSON.stringify({ "title": e.target[0].value,
                                           "text": e.target[1].value,
+                                          "image_url": e.target[2].value,
                                           })
-        AuthorizedPatchRequests(patchEndpoint, bodyToSend);
+        AuthorizedCrud('PATCH', endpoint, bodyToSend);
 
         props.history.push('/blog');
 
@@ -46,7 +53,11 @@ const EducationEdit = (props) => {
             <label htmlFor="textarea">Text: </label>
             <textarea id="textarea" defaultValue={article.text}></textarea>
 
+            <input type="text"/>
+
             <button>Edit</button>
+
+            <button onClick={deleteElement}>Delete</button>
         </form>
     )
 

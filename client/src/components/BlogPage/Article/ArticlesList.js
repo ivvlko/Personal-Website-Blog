@@ -1,15 +1,17 @@
 import Article from './Article';
-import { useState, useEffect } from 'react';
-import getArticles from '../../../services/getArticles';
-
+import { useState, useEffect, useContext } from 'react';
+import FreeRequests from '../../../services/FreeRequests';
+import { NavLink } from "react-router-dom";
+import LoggedContext from '../../Auth/LoggedContext';
 
 const ArticlesList = () => {
 
+    const {authenticated} = useContext(LoggedContext)
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
 
-        getArticles()
+        FreeRequests('GET', 'http://127.0.0.1:8000/api/articles/')
             .then(data => {
                 setArticles(data)
             })
@@ -24,13 +26,15 @@ const ArticlesList = () => {
                                         key={art.id}
                                         id={art.id}
                                         title={art.title}
-                                        image={art.image}
+                                        image={art.image_url}
                                         text={art.text}>
                                     </Article>)}
 
                 
 
             </section>
+
+            {(authenticated && localStorage.getItem('username') == 'admin') ? <NavLink to='/add/article'>Add</NavLink> : null}
             
         </div>
 

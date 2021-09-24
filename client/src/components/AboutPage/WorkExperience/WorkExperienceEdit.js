@@ -1,20 +1,26 @@
 import { useEffect, useState } from "react";
-import getStaticModelsData from "../../../services/getStatic";
-import AuthorizedPatchRequests from "../../../services/PatchRequests";
+import FreeRequests from "../../../services/FreeRequests";
 import { withRouter } from "react-router";
+import AuthorizedCrud from "../../../services/AuthorizedCrud";
 
 const WorkExperienceEdit = (props) => {
 
     const [workExperience, setWorkExperience] = useState([]);
     const id = props.match.params.id;
-    const summaryPath = `work-experience/${id}`;
 
-    const patchEndpoint = `http://127.0.0.1:8000/api/static/work-experience/${id}`;
+    const deleteElement = (e) => {
+        e.preventDefault();
+        AuthorizedCrud('DELETE', endpoint);
+        props.history.push('/')
+
+    }
+
+    const endpoint = `http://127.0.0.1:8000/api/static/work-experience/${id}`;
 
     useEffect(
         () => {
 
-            getStaticModelsData(summaryPath)
+            FreeRequests('GET', endpoint)
                 .then(data => setWorkExperience(
                     {
                         role: data.role,
@@ -35,7 +41,7 @@ const WorkExperienceEdit = (props) => {
                                           "company": e.target[1].value,
                                           "dates": e.target[2].value,
                                           "short_description": e.target[3].value })
-        AuthorizedPatchRequests(patchEndpoint, bodyToSend);
+        AuthorizedCrud('PATCH', endpoint, bodyToSend);
 
         props.history.push('/');
 
@@ -59,6 +65,8 @@ const WorkExperienceEdit = (props) => {
             </textarea>
 
             <button>Edit</button>
+            <br/>
+            <button onClick={deleteElement}>Delete</button>
         </form>
     )
 

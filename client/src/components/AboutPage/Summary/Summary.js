@@ -2,8 +2,8 @@ import styles from './Summary.module.css';
 import { useContext } from 'react';
 import LoggedContext from '../../Auth/LoggedContext';
 import { useEffect, useState } from 'react';
-import getStaticModelsData from '../../../services/getStatic';
 import { NavLink } from 'react-router-dom';
+import FreeRequests from '../../../services/FreeRequests';
 
 const Summary = (props) => {
 
@@ -12,8 +12,8 @@ const Summary = (props) => {
     const [summary, setSummary] = useState([]);
     useEffect(
         () => {
-            const summaryPath = 'summary/2';
-            getStaticModelsData(summaryPath)
+            const summaryPath = 'http://127.0.0.1:8000/api/static/summary/2';
+            FreeRequests('GET', summaryPath)
                 .then(data => setSummary(
                     {
                         image: data.picture,

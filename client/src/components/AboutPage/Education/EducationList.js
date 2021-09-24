@@ -1,17 +1,19 @@
-import { useEffect, useState } from 'react';
-import getStaticModelsData from '../../../services/getStatic';
+import { useEffect, useState, useContext } from 'react';
+import FreeRequests from '../../../services/FreeRequests';
 import styles from './Education.module.css';
 import Education from './Education';
-
-const educationListEndpoint = 'education/';
+import { NavLink } from "react-router-dom";
+import LoggedContext from '../../Auth/LoggedContext';
 
 const EducationList = () => {
 
+    const {authenticated} = useContext(LoggedContext)
+    const educationListEndpoint = 'http://127.0.0.1:8000/api/static/education/';
     const [educationList, setEducationList] = useState([]);
 
     useEffect(() => {
 
-        getStaticModelsData(educationListEndpoint)
+        FreeRequests('GET', educationListEndpoint)
             .then(data => setEducationList(data));
 
     }, []);
@@ -28,6 +30,7 @@ const EducationList = () => {
                     shortDescription={curr.short_description} />)}
 
             </section>
+            {(authenticated && localStorage.getItem('username') == 'admin') ? <NavLink to='/add/education'>Add</NavLink> : null}
         </div>
 
     )

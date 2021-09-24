@@ -1,18 +1,23 @@
 import { useEffect, useState } from "react";
-import getStaticModelsData from "../../../services/getStatic";
-import AuthorizedPatchRequests from "../../../services/PatchRequests";
 import { withRouter } from 'react-router-dom';
+import AuthorizedCrud from "../../../services/AuthorizedCrud";
+import FreeRequests from "../../../services/FreeRequests";
 
 const SummaryEdit = (props) => {
 
     const [summary, setSummary] = useState([]);
-    const summaryPath = 'summary/2';
-    const patchEndpoint = 'http://127.0.0.1:8000/api/static/summary/2'
+    const endpoint = 'http://127.0.0.1:8000/api/static/summary/2'
+
+    const [image, setImage] = useState('');
+    
+    const registerChange = (e) => {
+        setImage(e.target.files[0])
+    }
 
     useEffect(
         () => {
 
-            getStaticModelsData(summaryPath)
+            FreeRequests('GET', endpoint)
                 .then(data => setSummary(
                     {
                         image: data.picture,
@@ -27,8 +32,10 @@ const SummaryEdit = (props) => {
 
         e.preventDefault();
 
-        let bodyToSend = JSON.stringify({ "paragraph_with_short_bio": e.target[0].value })
-        AuthorizedPatchRequests(patchEndpoint, bodyToSend);
+        let formData = new FormData()
+        formData.append('picture', image);
+        formData.append('paragraph_with_short_bio', e.target[1].value)
+        AuthorizedCrud('PATCH', endpoint, formData, null);
 
         props.history.push('/');
 
@@ -37,6 +44,8 @@ const SummaryEdit = (props) => {
     return (
         <form onSubmit={handleEditSubmit}>
 
+            <label htmlFor='image'>Image</label>
+            <input type='file' onChange={registerChange}/>
 
             <label htmlFor="textarea">Change Summary: </label>
             <textarea id="textarea" defaultValue={summary.shortDescription} >

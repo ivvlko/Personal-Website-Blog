@@ -1,16 +1,19 @@
 import Project from "./Project";
-import { useEffect, useState } from 'react';
-import getStaticModelsData from "../../../services/getStatic";
+import { useEffect, useState, useContext } from 'react';
+import FreeRequests from "../../../services/FreeRequests";
 import styles from './Project.module.css';
+import { NavLink } from "react-router-dom";
+import LoggedContext from '../../Auth/LoggedContext';
 
-const projectsListEndpoint = 'projects/';
 
 const ProjectsList = () => {
 
+    const {authenticated} = useContext(LoggedContext)
+    const projectsListEndpoint = 'http://127.0.0.1:8000/api/static/projects/';
     const [projectsList, setProjectsList] = useState([]);
 
     useEffect(() => {
-        getStaticModelsData(projectsListEndpoint)
+        FreeRequests('GET', projectsListEndpoint)
             .then(res => setProjectsList(res))
     }, [])
 
@@ -27,6 +30,7 @@ const ProjectsList = () => {
                     id={curr.id}
                     sourceCode={curr.source_code} />)}
             </section>
+            {(authenticated && localStorage.getItem('username') == 'admin') ? <NavLink to='/add/project'>Add</NavLink> : null}
         </div>
 
     )
