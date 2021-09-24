@@ -32,21 +32,24 @@ const ContactForm = (props) => {
                 <option value="Analytical Dashboard">Analytical Dashboard</option>
                 <option value="Data Analysis/Analytics">Data Analysis/Analytics</option>
             </select>
+            <br/>
+            <br/>
             <label>Short Description of the Project:</label>
             <textarea></textarea>
-
+            <br/>
+            <br/>
             <label>Soft Deadline:</label>
             <input type='date' />
-
+            <br/>
             <label>Budger:</label>
             <input type='number' />
-
+            <br/>
             <label>Email:</label>
             <input type='text' />
-
+            <br/>
             <label>Phone Number:</label>
             <input type='text' />
-
+            <br/>
             <button>Submit</button>
         </form>
     )

@@ -27,7 +27,7 @@ const Navigation = (props) => {
                 }
                 {context.authenticated ? null : <NavLink className={styles.navigationItem} exact to='/login' activeClassName={styles.selected}>Login</NavLink>}
                 {!context.authenticated ? null : <a onClick={handleLogout} className={styles.navigationItem}>Logout</a>}
-
+                {context.authenticated ? null : <NavLink className={styles.navigationItem} exact to='/register' activeClassName={styles.selected}>Register</NavLink>}
             </ul>
 
         </nav>

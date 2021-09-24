@@ -30,19 +30,19 @@ const AddProject = (props) => {
         <form onSubmit={handlePostSubmit}>
             <label>Name:</label>
             <input type='text' id='name'/>
-
+            <br/>
             <label>Image:</label>
             <input type='file' id='name' onChange={registerChange}/>
-
+            <br/>
             <label>Technologies:</label>
             <input type='text' id='technologies'/>
-
+            <br/>
             <label>Source Code:</label>
             <input type='text' id='source_code'/>
-
+            <br/>
             <label>URL:</label>
             <input type='text' id='url'/>
-
+            <br/>
             <button>Add</button>
 
         </form>

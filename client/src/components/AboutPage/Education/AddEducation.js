@@ -23,16 +23,16 @@ const AddEducation = (props) => {
         <form onSubmit={handlePostSubmit}>
             <label>Degress:</label>
             <input type='text' id='name'/>
-
+            <br/>
             <label>School:</label>
             <input type='text' id='technologies'/>
-
+            <br/>
             <label>Dates:</label>
             <input type='text' id='dates'/>
-
+            <br/>
             <label>Description:</label>
             <input type='text' id='desc'/>
-
+            <br/>
             <button>Add</button>
 
         </form>

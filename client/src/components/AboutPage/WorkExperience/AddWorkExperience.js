@@ -23,16 +23,16 @@ const AddWorkExperience = (props) => {
         <form onSubmit={handlePostSubmit}>
             <label>Role:</label>
             <input type='text' id='role'/>
-
+            <br/>
             <label>Company:</label>
             <input type='text' id='company'/>
-
+            <br/>
             <label>Dates:</label>
             <input type='text' id='dates'/>
-
+            <br/>
             <label>Responsibilities:</label>
             <input type='text' id='resp'/>
-
+            <br/>
             <button>Add</button>
 
         </form>

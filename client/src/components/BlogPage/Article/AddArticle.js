@@ -24,12 +24,12 @@ const AddProject = (props) => {
         <form onSubmit={handlePostSubmit}>
             <label>Title:</label>
             <input type='text' id='title'/>
-
+            <br/>
             <label>Text:</label>
             <input type='text' id='technologies'/>
-
+            <br/>
             <input type="text" /> 
-
+            <br/>
             <button>Add</button>
 
         </form>

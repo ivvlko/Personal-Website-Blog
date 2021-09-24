@@ -52,18 +52,18 @@ const EducationEdit = (props) => {
 
             <label htmlFor='role'> Degree: </label>
             <input type="text" id='role' defaultValue={education.degree}/>
-
+            <br/>
             <label htmlFor='company'> School: </label>
             <input type="text" id='company' defaultValue={education.school}/>
-
+            <br/>
             <label htmlFor='dates'> Dates: </label>
             <input type="text" id='dates' defaultValue={education.dates}/>
-
+            <br/>
             <label htmlFor="textarea">Short Descrpition: </label>
             <textarea id="textarea" defaultValue={education.shortDescrpition} >
 
             </textarea>
-
+            <br/>
             <button>Edit</button>
             <br/>
             <button onClick={deleteElement}>Delete</button>

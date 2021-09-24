@@ -61,22 +61,22 @@ const ProjectEdit = (props) => {
 
             <label htmlFor='role'> Name: </label>
             <input type="text" id='role' defaultValue={project.name} />
-
+            <br/>
 
             <label htmlFor="textarea">Technologies: </label>
             <textarea id="textarea" defaultValue={project.technologies} >
 
             </textarea>
-
+            <br/>
 
             <label htmlFor='source_code'> Source Code: </label>
             <input type="text" id='source_code' defaultValue={project.source_code} />
-
+            <br/>
             <label htmlFor='url'> Url: </label>
             <input type="text" id='url' defaultValue={project.url} />
-
+            <br/>
             <input type="file" onChange={registerChange}/>
-
+            <br/>
             <button>Edit</button>
             <br/>
             <button onClick={deleteElement}>Delete</button>

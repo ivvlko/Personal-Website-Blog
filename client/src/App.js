@@ -20,6 +20,7 @@ import AddProject from './components/AboutPage/Project/AddProject';
 import AddEducation from './components/AboutPage/Education/AddEducation';
 import AddArticle from './components/BlogPage/Article/AddArticle';
 import ContactForm from './components/WorkRequests/ContactForm';
+import Registration from './components/Auth/Register';
 
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
           <Route exact path='/add/article' component={(authenticated && localStorage.getItem('username') === 'admin')? AddArticle : ErrorPageRights}/>
 
           <Route exact path='/login' component={Login}/>
+          <Route exact path='/register' component={Registration}/>
 
           <Route exact path='/work-requests' component={WorkRequestsList}/>
 

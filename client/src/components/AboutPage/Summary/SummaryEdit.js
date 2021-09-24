@@ -46,12 +46,12 @@ const SummaryEdit = (props) => {
 
             <label htmlFor='image'>Image</label>
             <input type='file' onChange={registerChange}/>
-
+            <br/>
             <label htmlFor="textarea">Change Summary: </label>
             <textarea id="textarea" defaultValue={summary.shortDescription} >
 
             </textarea>
-
+            <br/>
             <button>Edit</button>
         </form>
     )
