@@ -20,7 +20,7 @@ const Navigation = (props) => {
             <ul className={styles.navigationList}>
                 <NavLink className={styles.navigationItem} exact to='/' activeClassName={styles.selected}>About</NavLink>
                 <NavLink className={styles.navigationItem} exact to='/blog' activeClassName={styles.selected}>Blog</NavLink>
-                <NavLink className={styles.navigationItem} exact to='/contact' activeClassName={styles.selected}>Contact</NavLink>
+                <NavLink className={styles.navigationItem} exact to='/contact' activeClassName={styles.selected}>Contact Me</NavLink>
                 {(context.authenticated && localStorage.getItem('username') === 'admin') ?
                     <NavLink className={styles.navigationItem} exact to='/work-requests' activeClassName={styles.selected}>Work Requests</NavLink>
                     : null

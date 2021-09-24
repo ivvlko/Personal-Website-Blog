@@ -30,7 +30,7 @@ const EducationList = () => {
                     shortDescription={curr.short_description} />)}
 
             </section>
-            {(authenticated && localStorage.getItem('username') == 'admin') ? <NavLink to='/add/education'>Add</NavLink> : null}
+            {(authenticated && localStorage.getItem('username') === 'admin') ? <NavLink to='/add/education'>Add</NavLink> : null}
         </div>
 
     )

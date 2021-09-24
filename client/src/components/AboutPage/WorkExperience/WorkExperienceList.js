@@ -32,7 +32,7 @@ const WorkExperiences = (props) => {
                     shortDescription={current.short_description}
                 />)}
             </section>
-            {(authenticated && localStorage.getItem('username') == 'admin') ? <NavLink to='/add/experience'>Add</NavLink> : null}
+            {(authenticated && localStorage.getItem('username') === 'admin') ? <NavLink to='/add/experience'>Add</NavLink> : null}
         </div>
 
     )

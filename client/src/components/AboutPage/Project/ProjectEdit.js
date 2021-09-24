@@ -49,7 +49,8 @@ const ProjectEdit = (props) => {
         formData.append('source_code',e.target[2].value)
         formData.append('url', e.target[3].value)
 
-        AuthorizedCrud('PATCH', endpoint, formData, null);
+        AuthorizedCrud('PATCH', endpoint, formData, null)
+        .catch(err => console.log(err));
 
         props.history.push('/');
 
@@ -67,7 +68,6 @@ const ProjectEdit = (props) => {
 
             </textarea>
 
-            
 
             <label htmlFor='source_code'> Source Code: </label>
             <input type="text" id='source_code' defaultValue={project.source_code} />

@@ -19,6 +19,7 @@ import AddWorkExperience from './components/AboutPage/WorkExperience/AddWorkExpe
 import AddProject from './components/AboutPage/Project/AddProject';
 import AddEducation from './components/AboutPage/Education/AddEducation';
 import AddArticle from './components/BlogPage/Article/AddArticle';
+import ContactForm from './components/WorkRequests/ContactForm';
 
 
 function App() {
@@ -58,13 +59,11 @@ function App() {
           <Route exact path='/add/education' component={(authenticated && localStorage.getItem('username') === 'admin')? AddEducation : ErrorPageRights}/>
           <Route exact path='/add/article' component={(authenticated && localStorage.getItem('username') === 'admin')? AddArticle : ErrorPageRights}/>
 
-          <Route exact path='/contact'>
-            <h1>Contact</h1>
-          </Route>
-
           <Route exact path='/login' component={Login}/>
 
           <Route exact path='/work-requests' component={WorkRequestsList}/>
+
+          <Route exact path='/contact' component={ContactForm}/>
 
 
         </Switch>

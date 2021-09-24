@@ -82,6 +82,7 @@ class CommentViewDetails(RetrieveUpdateDestroyAPIView):
 class CreateWorkRequestView(CreateAPIView):
     queryset = WorkRequest.objects.all()
     serializer_class = WorkRequestSerializer
+    authentication_classes = []
     permission_classes = [AllowAny]
 
 class GetWorkRequestListsView(ListAPIView):

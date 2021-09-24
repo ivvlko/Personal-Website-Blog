@@ -40,6 +40,7 @@ const WorkRequestsList = () => {
         return (
             <section>
                 {requests.map(req => <WorkRequest key={req.id}
+                    id={req.id}
                     typeOfWork={req.type_of_work}
                     shortDescription={req.short_description}
                     expectedToBeDone={req.expected_to_be_done_until}

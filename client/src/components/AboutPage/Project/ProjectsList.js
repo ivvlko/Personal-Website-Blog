@@ -30,7 +30,7 @@ const ProjectsList = () => {
                     id={curr.id}
                     sourceCode={curr.source_code} />)}
             </section>
-            {(authenticated && localStorage.getItem('username') == 'admin') ? <NavLink to='/add/project'>Add</NavLink> : null}
+            {(authenticated && localStorage.getItem('username') === 'admin') ? <NavLink to='/add/project'>Add</NavLink> : null}
         </div>
 
     )

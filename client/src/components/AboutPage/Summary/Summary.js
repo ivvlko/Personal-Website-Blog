@@ -28,7 +28,7 @@ const Summary = (props) => {
             <h1 className={styles.summaryHeader}>Howdy? My name is Ivan. Welcome to my place!</h1>
             <img src={summary.image} alt="Me"/>
             <p>{summary.shortDescription}</p>
-            {(authenticated && localStorage.getItem('username') == 'admin') ? <NavLink to='/edit/summary/2'>Edit</NavLink> : null}
+            {(authenticated && localStorage.getItem('username') === 'admin') ? <NavLink to='/edit/summary/2'>Edit</NavLink> : null}
         </section>
     )
 

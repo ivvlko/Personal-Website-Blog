@@ -14,7 +14,7 @@ const Education = (props) => {
             <h2>School:{props.school}</h2>
             <h2>Dates:{props.dates}</h2>
             <h2>Short Description:{props.shortDescription}</h2>
-            {(authenticated && localStorage.getItem('username') == 'admin') ? <NavLink to={`/edit/education/${props.id}`}>Edit</NavLink> : null}
+            {(authenticated && localStorage.getItem('username') === 'admin') ? <NavLink to={`/edit/education/${props.id}`}>Edit</NavLink> : null}
         </section>
     )
 

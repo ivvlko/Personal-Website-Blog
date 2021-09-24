@@ -34,7 +34,7 @@ const ArticlesList = () => {
 
             </section>
 
-            {(authenticated && localStorage.getItem('username') == 'admin') ? <NavLink to='/add/article'>Add</NavLink> : null}
+            {(authenticated && localStorage.getItem('username') === 'admin') ? <NavLink to='/add/article'>Add</NavLink> : null}
             
         </div>
 
