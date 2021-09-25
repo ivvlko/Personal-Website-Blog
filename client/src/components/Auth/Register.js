@@ -19,7 +19,7 @@ const Registration = (props) => {
     };
 
     return (
-        <form onSubmit={submitForm}>
+        <form onSubmit={submitForm} className="GeneralForm">
 
             <label>Username:</label>
             <input type='text' />

@@ -4,6 +4,7 @@
     background-image:  url(https://t3.ftcdn.net/jpg/02/33/47/14/360_F_233471486_WIOAYpd2Rm1rWiVHcSwprEgCTTdaY6gu.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    text-shadow: 3px 3px blue;
     border-radius: 20px;
     width: 55%;
 }
@@ -17,6 +18,7 @@
 
 .workExperienceHeader{
     color: whitesmoke;
+    text-shadow: 3px 3px blue;
     font-size: 250%;
     text-align: center;
     margin: 20px 0px;

@@ -21,12 +21,12 @@ const AddProject = (props) => {
     }
 
     return (
-        <form onSubmit={handlePostSubmit}>
+        <form onSubmit={handlePostSubmit} className="GeneralForm">
             <label>Title:</label>
             <input type='text' id='title'/>
             <br/>
             <label>Text:</label>
-            <input type='text' id='technologies'/>
+            <textarea type='text' id='technologies'/>
             <br/>
             <input type="text" /> 
             <br/>

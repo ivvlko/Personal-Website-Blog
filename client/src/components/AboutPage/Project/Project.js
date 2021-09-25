@@ -16,8 +16,8 @@ const Project = (props) => {
        <br/>
        <h2>Description: {props.technologies}</h2>
        <br/>
-       <h2><a href={props.sourceCode}>Repository: </a></h2>
-       {(authenticated && localStorage.getItem('username') === 'admin') ?  <NavLink to={`/edit/projects/${props.id}`}>Edit</NavLink> : null}
+       <h2><a target="_blank" href={props.sourceCode}>Repository: Click </a></h2>
+       {(authenticated && localStorage.getItem('username') === 'admin') ?  <NavLink className='EditButton' to={`/edit/projects/${props.id}`}>Edit</NavLink> : null}
       
     </section>
     )

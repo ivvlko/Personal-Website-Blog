@@ -3,6 +3,7 @@ import { useState, useEffect, useContext } from 'react';
 import FreeRequests from '../../../services/FreeRequests';
 import { NavLink } from "react-router-dom";
 import LoggedContext from '../../Auth/LoggedContext';
+import styles from './Article.module.css';
 
 const ArticlesList = () => {
 
@@ -13,15 +14,14 @@ const ArticlesList = () => {
 
         FreeRequests('GET', 'http://127.0.0.1:8000/api/articles/')
             .then(data => {
-                setArticles(data)
+                setArticles(data.reverse())
             })
 
     }, [])
 
     return (
-        <div>
-            <h1>My Takes on:</h1>
-            <section>
+        <div className={styles.container}>
+            <section className={styles.ArticleList}>
                 {articles.map(art => <Article
                                         key={art.id}
                                         id={art.id}

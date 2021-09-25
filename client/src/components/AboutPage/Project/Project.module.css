@@ -11,6 +11,7 @@
     background-repeat: no-repeat;
     border-radius: 20px;
     background-size: cover;
+    text-shadow: 3px 3px blue;
     color: white;
     padding: 5px;
     margin-top: 10px;
@@ -21,13 +22,17 @@
 .projectItem *{
     color: white;
 }
-
+.projectItem a:hover{
+    cursor: pointer;
+    opacity: 0.4;
+}
 .projectImage{
     max-width: 100%;
 }
 
 .header{
     text-align: center;
+    text-shadow: 3px 3px blue;
     margin: 20px 0px;
     color: whitesmoke;
     font-size: 250%;

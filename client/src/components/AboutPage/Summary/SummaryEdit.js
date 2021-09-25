@@ -42,7 +42,7 @@ const SummaryEdit = (props) => {
     };
 
     return (
-        <form onSubmit={handleEditSubmit}>
+        <form onSubmit={handleEditSubmit} className="GeneralForm">
 
             <label htmlFor='image'>Image</label>
             <input type='file' onChange={registerChange}/>

@@ -8,3 +8,92 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+
+.EditButton{
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.EditButton:hover{
+  opacity: 0.8;
+}
+
+.CustomFooter{
+  background-image: url('https://media.gettyimages.com/videos/abstract-stripes-background-loop-video-id946877514?s=640x640');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.CustomFooter span{
+  margin-left: 10px;
+}
+
+.fontawesomeIcons{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
+
+.CustomFooter a:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.GeneralForm{
+  padding-top: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.GeneralForm input, select, textarea {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  .GeneralForm button{
+    background-color: blueviolet;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .GeneralForm button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+  }
+.formContacts{
+  width: 80%;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.formContacts a{
+  font-size: 150%;
+  padding-left: 15%;
+}
+
+.formContacts a:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}

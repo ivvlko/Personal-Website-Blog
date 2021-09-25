@@ -17,7 +17,7 @@ const WorkExperience = (props) => {
         <br/>
         <h2>Main Responsibilities: {props.shortDescription}</h2>
         
-        {(authenticated && localStorage.getItem('username') === 'admin') ? <NavLink to={`/edit/work-experience/${props.id}`}>Edit</NavLink> : null}
+        {(authenticated && localStorage.getItem('username') === 'admin') ? <NavLink className='EditButton' to={`/edit/work-experience/${props.id}`}>Edit</NavLink> : null}
     </section>
     )
 }

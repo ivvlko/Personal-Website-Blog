@@ -45,7 +45,7 @@ const EducationEdit = (props) => {
     };
 
     return (
-        <form onSubmit={handleEditSubmit}>
+        <form onSubmit={handleEditSubmit} className="GeneralForm">
 
             <label htmlFor='role'> Title: </label>
             <input type="text" id='role' defaultValue={article.title}/>

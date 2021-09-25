@@ -27,7 +27,7 @@ const AddProject = (props) => {
     }
 
     return (
-        <form onSubmit={handlePostSubmit}>
+        <form onSubmit={handlePostSubmit} className="GeneralForm">
             <label>Name:</label>
             <input type='text' id='name'/>
             <br/>

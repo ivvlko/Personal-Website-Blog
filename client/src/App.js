@@ -21,6 +21,7 @@ import AddEducation from './components/AboutPage/Education/AddEducation';
 import AddArticle from './components/BlogPage/Article/AddArticle';
 import ContactForm from './components/WorkRequests/ContactForm';
 import Registration from './components/Auth/Register';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -72,6 +73,7 @@ function App() {
 
       </LoggedContext.Provider>
 
+      <Footer/>
     </div>
   );
 }

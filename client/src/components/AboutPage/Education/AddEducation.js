@@ -20,7 +20,7 @@ const AddEducation = (props) => {
     }
 
     return (
-        <form onSubmit={handlePostSubmit}>
+        <form onSubmit={handlePostSubmit} className="GeneralForm">
             <label>Degress:</label>
             <input type='text' id='name'/>
             <br/>

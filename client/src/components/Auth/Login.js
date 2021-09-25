@@ -39,7 +39,7 @@ const Login = ({history}) => {
 
     return (
         <div>
-            <form onSubmit={onSubmitLoginForm}>
+            <form onSubmit={onSubmitLoginForm} className="GeneralForm">
                 <label htmlFor="username">Username</label>
                 <input type="text" name="username" />
                 <br/>
