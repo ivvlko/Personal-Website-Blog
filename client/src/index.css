@@ -25,7 +25,7 @@
 }
 
 .CustomFooter{
-  background-image: url('https://media.gettyimages.com/videos/abstract-stripes-background-loop-video-id946877514?s=640x640');
+  background-image: url('./static_files/footerBG.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100px;
@@ -52,6 +52,7 @@
 }
 
 .GeneralForm{
+  background-image: url('./static_files/summary_background.jpeg');
   padding-top: 20px;
   width: 90%;
   margin: 0 auto;
@@ -96,4 +97,18 @@
 .formContacts a:hover{
   cursor: pointer;
   opacity: 0.8;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#AboutPage, #BlogPage, #ContactPage {  
+  animation: 0.5s ease-out 0s 1 slideInFromLeft;
+
 }

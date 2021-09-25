@@ -14,7 +14,7 @@ const WorkExperiences = (props) => {
 
     useEffect(() => {
         FreeRequests('GET', endpoint)
-            .then(data => setWorkExperiences(data))
+            .then(data => setWorkExperiences(data.reverse()))
 
     }, [])
 

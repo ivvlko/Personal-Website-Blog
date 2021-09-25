@@ -16,7 +16,7 @@ const Navigation = (props) => {
     };
 
     return (
-        <nav className={styles.navigation}>
+        <nav className={styles.navigation} id='Navigation'>
             <ul className={styles.homeButtonContainer}>
                 <NavLink className={styles.homeButton} to='/'>Ivan Koev / Software Engineer</NavLink>
             </ul>

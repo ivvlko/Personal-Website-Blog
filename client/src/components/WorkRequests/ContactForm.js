@@ -29,7 +29,7 @@ const ContactForm = (props) => {
     };
 
     return (
-        <div>
+        <div id='ContactPage'>
 
             <div className='formContacts'>
 

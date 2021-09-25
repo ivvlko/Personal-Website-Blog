@@ -7,7 +7,7 @@ import styles from './AboutPage.module.css';
 
 const AboutPage = () => {
     return (
-        <section className={styles.aboutPage}>
+        <section className={styles.aboutPage} id='AboutPage'>
             <Summary/>
             <WorkExperiences/>
             <EducationList/>

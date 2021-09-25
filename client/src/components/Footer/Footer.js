@@ -6,7 +6,7 @@ const Footer = () => {
     const FontAwesome = require('react-fontawesome');
 
     return (
-        <footer className="CustomFooter">
+        <footer className="CustomFooter" id='Footer'>
             <span>&copy; <em id="copyElement"></em>by Ivan Koev</span>
 
             <div className='fontawesomeIcons'>

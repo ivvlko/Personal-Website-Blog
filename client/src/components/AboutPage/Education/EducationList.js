@@ -14,7 +14,7 @@ const EducationList = () => {
     useEffect(() => {
 
         FreeRequests('GET', educationListEndpoint)
-            .then(data => setEducationList(data));
+            .then(data => setEducationList(data.reverse()));
 
     }, []);
 

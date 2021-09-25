@@ -3,7 +3,7 @@ import ArticlesList from "./Article/ArticlesList";
 const BlogPage = () => {
 
     return (
-        <section>
+        <section id='BlogPage'>
             <ArticlesList/>
         </section>
     )
