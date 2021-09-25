@@ -1,5 +1,16 @@
 .navigation {
     background-color: rgb(78, 42, 89);
+    display: grid;
+    grid-template-areas: "leftbar rightbar"
+}
+
+.homeButtonContainer{
+    grid-area: rightbar;
+    padding: 20px;
+}
+
+.homeButtonContainer{
+    grid-area: leftbar;
 }
 
 .selected{
@@ -18,6 +29,18 @@
 }
 
 .navigationItem:hover{
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.homeButton{
+    color: #e6d8db    ;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 150%;
+}
+
+.homeButton:hover{
     cursor: pointer;
     opacity: 0.4;
 }

@@ -1,12 +1,26 @@
 .workExperienceElement{
     padding: 10px 5px;
     margin: 10px;
-    background-color: darkseagreen;
-    width: 45%;
+    background-image:  url(https://t3.ftcdn.net/jpg/02/33/47/14/360_F_233471486_WIOAYpd2Rm1rWiVHcSwprEgCTTdaY6gu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    width: 55%;
+}
+
+.workExperienceContainer{
+    margin-top: 20px;
+    background-image:  url(https://media.istockphoto.com/photos/abstract-textured-background-in-light-purple-picture-id1185663330?k=20&m=1185663330&s=612x612&w=0&h=XKJy_aQ3a99bRmWOaKLEHUazYqXjiKGNIQjfz145RtA=);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .workExperienceHeader{
-    background-color: red;
+    color: whitesmoke;
+    font-size: 250%;
+    text-align: center;
+    margin: 20px 0px;
+    letter-spacing: 5px;
 }
 
 .experiencesContainer{
@@ -18,4 +32,7 @@
 
 .workExperienceElement * {
     padding-top: 10px;
+    letter-spacing: 2px;
+    color: seashell;
+    text-align: center;
 }

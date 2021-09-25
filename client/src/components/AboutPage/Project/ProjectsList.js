@@ -18,8 +18,8 @@ const ProjectsList = () => {
     }, [])
 
     return (
-        <div>
-            <h1>Projects</h1>
+        <div className={styles.projectsContainer}>
+            <h1 className={styles.header}>Projects: </h1>
 
             <section className={styles.projectList}>
 

@@ -19,7 +19,7 @@ const WorkExperiences = (props) => {
     }, [])
 
     return (
-        <div>
+        <div className={styles.workExperienceContainer}>
             <h1 className={styles.workExperienceHeader}>Work Experience: </h1>
             <section className={styles.experiencesContainer}>
 
@@ -32,7 +32,7 @@ const WorkExperiences = (props) => {
                     shortDescription={current.short_description}
                 />)}
             </section>
-            {(authenticated && localStorage.getItem('username') === 'admin') ? <NavLink to='/add/experience'>Add</NavLink> : null}
+            {(authenticated && localStorage.getItem('username') === 'admin') ? <NavLink className={styles.addButton} to='/add/experience'>Add</NavLink> : null}
         </div>
 
     )

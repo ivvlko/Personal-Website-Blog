@@ -19,9 +19,9 @@ const EducationList = () => {
     }, []);
 
     return (
-        <div>
+        <div className={styles.educationContainer}>
             <h1 className={styles.educationHeader}>Education:</h1>
-            <section className={styles.educationContainer}>
+            <section className={styles.educationListContainer}>
                 {educationList.map(curr => <Education key={curr.id}
                     degree={curr.degree}
                     id = {curr.id}

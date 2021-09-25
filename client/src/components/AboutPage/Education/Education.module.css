@@ -1,19 +1,28 @@
 .educationHeader {
     text-align: center;
-    background-color: darkslateblue;
-    color: floralwhite;
+    color: purple;
+    margin: 20px 0px;
+    font-size: 250%;
 }
 
 .educationItem {
-    background-color: gold;
+    background-image: url(../../../static_files/summary_background.jpeg);
     color: purple;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 20px;
     margin-top: 10px;
     width: 45%;
 }
 
-.educationContainer{
+.educationListContainer{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    letter-spacing: 2px;
+    
+}
+
+.educationContainer{
+    background-image: url(https://files.123freevectors.com/wp-content/original/162739-grey-and-white-water-color-background.jpg);
+
 }

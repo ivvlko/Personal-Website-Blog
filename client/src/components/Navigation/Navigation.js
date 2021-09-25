@@ -17,7 +17,11 @@ const Navigation = (props) => {
 
     return (
         <nav className={styles.navigation}>
+            <ul className={styles.homeButtonContainer}>
+                <NavLink className={styles.homeButton} to='/'>Ivan Koev / Software Engineer</NavLink>
+            </ul>
             <ul className={styles.navigationList}>
+                
                 <NavLink className={styles.navigationItem} exact to='/' activeClassName={styles.selected}>About</NavLink>
                 <NavLink className={styles.navigationItem} exact to='/blog' activeClassName={styles.selected}>Blog</NavLink>
                 <NavLink className={styles.navigationItem} exact to='/contact' activeClassName={styles.selected}>Contact Me</NavLink>
@@ -25,9 +29,9 @@ const Navigation = (props) => {
                     <NavLink className={styles.navigationItem} exact to='/work-requests' activeClassName={styles.selected}>Work Requests</NavLink>
                     : null
                 }
-                {context.authenticated ? null : <NavLink className={styles.navigationItem} exact to='/login' activeClassName={styles.selected}>Login</NavLink>}
+                {/* {context.authenticated ? null : <NavLink className={styles.navigationItem} exact to='/login' activeClassName={styles.selected}>Login</NavLink>} */}
                 {!context.authenticated ? null : <a onClick={handleLogout} className={styles.navigationItem}>Logout</a>}
-                {context.authenticated ? null : <NavLink className={styles.navigationItem} exact to='/register' activeClassName={styles.selected}>Register</NavLink>}
+                {/* {context.authenticated ? null : <NavLink className={styles.navigationItem} exact to='/register' activeClassName={styles.selected}>Register</NavLink>} */}
             </ul>
 
         </nav>
