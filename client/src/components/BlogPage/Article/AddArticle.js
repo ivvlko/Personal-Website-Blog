@@ -11,7 +11,8 @@ const AddProject = (props) => {
         let body = JSON.stringify({
             'image_url': e.target[2].value,
             'title': e.target[0].value,
-            'text': e.target[1].value
+            'text': e.target[1].value,
+            'embedded': e.target[3].value
         });
         
 
@@ -28,8 +29,11 @@ const AddProject = (props) => {
             <label>Text:</label>
             <textarea type='text' id='technologies'/>
             <br/>
+            <label>Article Header Image:</label>
             <input type="text" /> 
             <br/>
+            <label>Embedded video/game Iframe: </label>
+            <input type='text'/>
             <button>Add</button>
 
         </form>

@@ -99,7 +99,8 @@
   opacity: 0.8;
 }
 
-@keyframes slideInFromLeft {
+
+@keyframes slideInFromBottom {
   0% {
     transform: translateY(100%);
   }
@@ -108,10 +109,10 @@
   }
 }
 
-#AboutPage, #BlogPage, #ContactPage, #ArticleDetailPage {  
-  animation: 0.7s ease-out 0s 1 slideInFromLeft;
-
+#AboutPage, #BlogPage, #ContactPage, #ArticleDetailPage, #Footer{
+  animation: 1s ease-out 0s 1 slideInFromBottom;
 }
+
 @media only screen and (max-width: 600px) {
   .formContacts{
     margin-top: 10px;

@@ -6,4 +6,5 @@ class Article(models.Model):
     text = models.TextField(max_length=10000)
     image_url = models.URLField(blank=True, null=True)
     date_created = models.DateTimeField(default=timezone.now, blank=True, null=True)
+    embedded = models.TextField(blank=True, null=True)
 
