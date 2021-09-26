@@ -43,3 +43,20 @@
     background-image: url("../../../static_files/summary_background.jpeg");
     
 }
+
+@media only screen and (max-width: 600px) {
+
+    .summarySection {
+        display: grid;
+        grid-template-areas: "head  head"
+                             "profileImage  profileImage"
+                             "shortDescription  shortDescription";
+        grid-gap: 0 20px; 
+        grid-template-columns: 50% 45%;
+        margin-top: 20px;
+        padding: 10px;
+        background-image: url("../../../static_files/summary_background.jpeg");
+        
+    }
+    
+  }

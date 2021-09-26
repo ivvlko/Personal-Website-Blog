@@ -112,3 +112,9 @@
   animation: 0.5s ease-out 0s 1 slideInFromLeft;
 
 }
+@media only screen and (max-width: 600px) {
+  .formContacts{
+    margin-top: 10px;
+    display: inline;
+  }
+}

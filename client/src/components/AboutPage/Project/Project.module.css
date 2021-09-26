@@ -44,3 +44,13 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+@media only screen and (max-width: 600px){
+    .projectItem{
+        max-width: 75%;
+        width: 75%;
+        margin-bottom: 25px;
+    }
+
+   
+}
