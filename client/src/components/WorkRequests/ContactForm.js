@@ -20,7 +20,24 @@ const ContactForm = (props) => {
         })
 
         AuthorizedCrud('POST', endpoint, body)
-        props.history.push('/');
+            .then(data => {
+                const success = 'id' in data;
+                if(!success){
+                    
+                    Object.keys(data).map((x) => {
+                        let unfilledInput = document.getElementById(x);
+                        let warning = document.getElementById('warningSpan');
+                        warning.style.display = 'block';
+                        unfilledInput.style.borderBlockColor = "red";
+                        unfilledInput.style.borderBlockWidth = '5px';
+                        setTimeout(() => {
+                            warning.style.display= 'none';
+                        }, 2000);
+                    })
+                }else{
+                    props.history.push('/');
+                }
+            });
 
     }
 
@@ -69,7 +86,7 @@ const ContactForm = (props) => {
             <form onSubmit={handleSubmit} className="GeneralForm" className="GeneralForm">
                 <h3></h3>
                 <label>Type of Work: </label>
-                <select name="cars" id="cars">
+                <select  id="types">
                     <option value="Website">Website</option>
                     <option value="Machine Learning Model">Machine Learning Model</option>
                     <option value="Mobile App">Mobile App</option>
@@ -79,21 +96,22 @@ const ContactForm = (props) => {
                 <br />
                 <br />
                 <label>Short Description of the Project:</label>
-                <textarea></textarea>
+                <textarea id='short_description'></textarea>
                 <br />
                 <br />
                 <label>Soft Deadline:</label>
-                <input type='date' />
+                <input type='date' id='expected_to_be_done_until' />
                 <br />
                 <label>Budger:</label>
-                <input type='number' />
+                <input type='number' id='budget'/>
                 <br />
                 <label>Email:</label>
-                <input type='text' />
+                <input types='email' id='email' />
                 <br />
                 <label>Phone Number:</label>
-                <input type='text' />
+                <input type='text' id='phone_number' />
                 <br />
+                <span id= 'warningSpan' style={{display: 'none', color: 'red'}}>Please Fill In the Inputs</span>
                 <button>Submit</button>
             </form>
 
