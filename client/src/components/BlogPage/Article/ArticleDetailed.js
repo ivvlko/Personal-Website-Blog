@@ -16,7 +16,7 @@ const ArticleDetailed = ({match}) => {
 
     return (
 
-        <article className={styles.MyArticle}>
+        <article className={styles.MyArticle} id='ArticleDetailPage'>
             <h2>{state.title}</h2>
             <h3>{state.date_created ? state.date_created.slice(0, 10) : null }</h3>
             <img src={state.image_url} alt="title"/>

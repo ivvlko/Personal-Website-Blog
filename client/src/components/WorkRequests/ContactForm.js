@@ -35,7 +35,11 @@ const ContactForm = (props) => {
                         }, 2000);
                     })
                 }else{
-                    props.history.push('/');
+                    let success = document.getElementById('successSpan');
+                    success.style.display = 'block';
+                    setTimeout(() => {
+                        props.history.push('/');
+                    }, 3000);
                 }
             });
 
@@ -82,7 +86,7 @@ const ContactForm = (props) => {
                     />
                 </a>
             </div>
-            <h2 style={{textAlign: 'center', marginTop: '50px'}}>Or If You Already Have Something in Mind: </h2>
+            <h2 style={{textAlign: 'center', marginTop: '50px'}}>Or If You're Ready to Talk Work Directly: </h2>
             <form onSubmit={handleSubmit} className="GeneralForm" className="GeneralForm">
                 <h3></h3>
                 <label>Type of Work: </label>
@@ -111,7 +115,8 @@ const ContactForm = (props) => {
                 <label>Phone Number:</label>
                 <input type='text' id='phone_number' />
                 <br />
-                <span id= 'warningSpan' style={{display: 'none', color: 'red'}}>Please Fill In the Inputs</span>
+                <span id= 'warningSpan' style={{display: 'none', color: 'red', marginTop: '10px', marginBottom:'10px'}}>Please Fill In the Inputs</span>
+                <span id= 'successSpan' style={{display: 'none', color: 'green', marginTop: '10px', marginBottom:'10px'}}>Thank You, Will Reach Out Soon!</span>
                 <button>Submit</button>
             </form>
 
