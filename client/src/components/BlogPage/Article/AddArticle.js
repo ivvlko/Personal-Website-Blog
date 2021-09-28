@@ -3,7 +3,7 @@ import AuthorizedCrud from '../../../services/AuthorizedCrud';
 
 const AddProject = (props) => {
 
-    const postEndpoint = 'http://127.0.0.1:8000/api/articles/';
+    const postEndpoint = 'http://18.156.33.116:80/api/articles/';
 
 
     const handlePostSubmit = (e) =>{

@@ -3,7 +3,7 @@ import AuthorizedCrud from '../../../services/AuthorizedCrud';
 
 const AddEducation = (props) => {
 
-    const postEndpoint = 'http://127.0.0.1:8000/api/static/education/';
+    const postEndpoint = 'http://18.156.33.116:80/api/static/education/';
 
     const handlePostSubmit = (e) =>{
         e.preventDefault();
@@ -21,7 +21,7 @@ const AddEducation = (props) => {
 
     return (
         <form onSubmit={handlePostSubmit} className="GeneralForm">
-            <label>Degress:</label>
+            <label>Degree:</label>
             <input type='text' id='name'/>
             <br/>
             <label>School:</label>

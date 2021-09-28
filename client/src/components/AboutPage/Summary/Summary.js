@@ -12,7 +12,7 @@ const Summary = (props) => {
     const [summary, setSummary] = useState([]);
     useEffect(
         () => {
-            const summaryPath = 'http://127.0.0.1:8000/api/static/summary/2';
+            const summaryPath = 'http://18.156.33.116:80/api/static/summary/2';
             FreeRequests('GET', summaryPath)
                 .then(data => setSummary(
                     {

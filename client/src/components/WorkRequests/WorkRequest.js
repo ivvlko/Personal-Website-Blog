@@ -4,7 +4,7 @@ import {useHistory} from 'react-router-dom';
 const WorkRequest = (props) => {
 
     const history = useHistory();
-    const endpoint = `http://127.0.0.1:8000/api/work-requests/${props.id}`;
+    const endpoint = `http://18.156.33.116:80/api/work-requests/${props.id}`;
 
     const deleteObject = () => {
         AuthorizedCrud('DELETE', endpoint);

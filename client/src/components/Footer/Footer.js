@@ -1,7 +1,19 @@
 import 'font-awesome/css/font-awesome.min.css';
+import { useContext } from 'react';
+import LoggedContext from '../Auth/LoggedContext';
+import { NavLink, useHistory } from 'react-router-dom';
 
 
 const Footer = () => {
+    
+    const { authenticated, setAuthenticated } = useContext(LoggedContext);
+    const history = useHistory();
+
+    const handleLogout = () => {
+        setAuthenticated(false)
+        localStorage.clear();
+        history.push("/");
+    };
 
     const FontAwesome = require('react-fontawesome');
 
@@ -34,6 +46,9 @@ const Footer = () => {
                     />
                 </a>
             </div>
+
+            {authenticated ? null : <NavLink  exact to='/login' >Login</NavLink>} 
+        {authenticated ? <a onClick={handleLogout} >Logout</a>: null} 
 
 
         </footer>

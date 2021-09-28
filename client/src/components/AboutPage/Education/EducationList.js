@@ -8,7 +8,7 @@ import LoggedContext from '../../Auth/LoggedContext';
 const EducationList = () => {
 
     const {authenticated} = useContext(LoggedContext)
-    const educationListEndpoint = 'http://127.0.0.1:8000/api/static/education/';
+    const educationListEndpoint = 'http://18.156.33.116:80/api/static/education/';
     const [educationList, setEducationList] = useState([]);
 
     useEffect(() => {

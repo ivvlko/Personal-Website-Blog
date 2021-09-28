@@ -5,15 +5,9 @@ import LoggedContext from '../Auth/LoggedContext';
 import { withRouter } from 'react-router';
 
 
-const Navigation = (props) => {
-    const { setAuthenticated } = useContext(LoggedContext);
+const Navigation = ({history}) => {
+    const { authenticated, setAuthenticated } = useContext(LoggedContext);
     const context = useContext(LoggedContext);
-
-    const handleLogout = () => {
-        setAuthenticated(false)
-        localStorage.clear();
-        props.history.push("/");
-    };
 
     return (
         <nav className={styles.navigation} id='Navigation'>
@@ -29,9 +23,7 @@ const Navigation = (props) => {
                     <NavLink className={styles.navigationItem} exact to='/work-requests' activeClassName={styles.selected}>Work Requests</NavLink>
                     : null
                 }
-                {/* {context.authenticated ? null : <NavLink className={styles.navigationItem} exact to='/login' activeClassName={styles.selected}>Login</NavLink>} */}
-                {!context.authenticated ? null : <a onClick={handleLogout} className={styles.navigationItem}>Logout</a>}
-                {/* {context.authenticated ? null : <NavLink className={styles.navigationItem} exact to='/register' activeClassName={styles.selected}>Register</NavLink>} */}
+
             </ul>
 
         </nav>

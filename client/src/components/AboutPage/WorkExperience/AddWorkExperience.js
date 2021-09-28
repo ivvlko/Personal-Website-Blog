@@ -3,7 +3,7 @@ import AuthorizedCrud from '../../../services/AuthorizedCrud';
 
 const AddWorkExperience = (props) => {
 
-    const postEndpoint = 'http://127.0.0.1:8000/api/static/work-experience/';
+    const postEndpoint = 'http://18.156.33.116:80/api/static/work-experience/';
 
     const handlePostSubmit = (e) =>{
         e.preventDefault();

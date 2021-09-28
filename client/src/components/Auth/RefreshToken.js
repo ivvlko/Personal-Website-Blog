@@ -1,5 +1,5 @@
 const refreshToken = () => {
-    return fetch('http://127.0.0.1:8000/api/token/refresh/', {
+    return fetch('http://18.156.33.116:80/api/token/refresh/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 'refresh': localStorage.getItem('refresh')})

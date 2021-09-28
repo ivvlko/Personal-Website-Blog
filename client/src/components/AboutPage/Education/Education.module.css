@@ -12,6 +12,8 @@
     border-radius: 20px;
     margin-top: 10px;
     width: 45%;
+    word-wrap: break-word;
+    white-space: pre-line;
 }
 
 .educationListContainer{
@@ -23,16 +25,26 @@
 }
 
 .educationContainer{
+    width: 100%;
     background-image: url('../../../static_files/educationBG.jpg');
 
 }
 
 @media only screen and (max-width: 600px){
+    
     .educationItem{
-        max-width: 75%;
-        width: 75%;
+        max-width: 85%;
+        width: 85%;
         margin-bottom: 25px;
     }
+
+    .educationContainer{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+
 
    
 }

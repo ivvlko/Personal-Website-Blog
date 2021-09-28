@@ -9,7 +9,7 @@ const ProjectEdit = (props) => {
     const [image, setImage] = useState('');
     const id = props.match.params.id;
 
-    const endpoint = `http://127.0.0.1:8000/api/static/projects/${id}`;
+    const endpoint = `http://18.156.33.116:80/api/static/projects/${id}`;
 
     const registerChange = (e) => {
         setImage(e.target.files[0])

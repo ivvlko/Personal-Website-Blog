@@ -10,11 +10,11 @@ const Education = (props) => {
 
     return (
         <section className={styles.educationItem}>
-            <h2>Degree:{props.degree}</h2>
+            <h2>{props.degree}</h2>
             <br/>
-            <h2>School:{props.school}</h2>
+            <h2>{props.school}</h2>
             <br/>
-            <h2>Dates:{props.dates}</h2>
+            <h2>{props.dates}</h2>
             <br/>
             <h2>Disciplines: {props.shortDescription}</h2>
             {(authenticated && localStorage.getItem('username') === 'admin') ? <NavLink className='EditButton' to={`/edit/education/${props.id}`}>Edit</NavLink> : null}

@@ -9,7 +9,7 @@ const ArticleDetailed = ({match}) => {
 
     useEffect(() => {
 
-        FreeRequests('GET', `http://127.0.0.1:8000/api/articles/${currentId}`)
+        FreeRequests('GET', `http://18.156.33.116:80/api/articles/${currentId}`)
             .then(res => setState(res))
 
     }, [])

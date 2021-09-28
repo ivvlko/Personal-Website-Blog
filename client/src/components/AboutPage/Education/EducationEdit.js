@@ -8,7 +8,7 @@ const EducationEdit = (props) => {
     const [education, setEducation] = useState([]);
     const id = props.match.params.id;
 
-    const endpoint = `http://127.0.0.1:8000/api/static/education/${id}`;
+    const endpoint = `http://18.156.33.116:80/api/static/education/${id}`;
 
     const deleteElement = (e) => {
         e.preventDefault();

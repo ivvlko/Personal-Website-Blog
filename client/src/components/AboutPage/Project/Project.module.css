@@ -40,6 +40,7 @@
 }
 
 .projectsContainer{
+    width: 100%;
     background-image: url('../../../static_files/expBG.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -47,9 +48,16 @@
 
 @media only screen and (max-width: 600px){
     .projectItem{
-        max-width: 75%;
-        width: 75%;
+        max-width: 85%;
+        width: 85%; 
         margin-bottom: 25px;
+    }
+
+    .projectsContainer{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
     }
 
    

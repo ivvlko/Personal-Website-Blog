@@ -4,7 +4,7 @@ import {useState} from 'react';
 
 const AddProject = (props) => {
 
-    const postEndpoint = 'http://127.0.0.1:8000/api/static/projects/';
+    const postEndpoint = 'http://18.156.33.116:80/api/static/projects/';
 
     const [image, setImage] = useState('');
     

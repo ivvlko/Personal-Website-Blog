@@ -9,13 +9,13 @@ const WorkExperience = (props) => {
 
     return (
     <section className={styles.workExperienceElement}>
-        <h2>Role: {props.role}</h2>
+        <h2>{props.role} at {props.company}</h2>
         <br/>
-        <h2>Company: {props.company}</h2>
+        <h2>{props.dates}</h2>
         <br/>
-        <h2>Period: {props.dates}</h2>
-        <br/>
-        <h2>Main Responsibilities: {props.shortDescription}</h2>
+        <h2>Responsibilities and Projects: </h2>
+        <h2 className={styles.responsibilitiesAndProjects}>{props.shortDescription}</h2>
+        
         
         {(authenticated && localStorage.getItem('username') === 'admin') ? <NavLink className='EditButton' to={`/edit/work-experience/${props.id}`}>Edit</NavLink> : null}
     </section>

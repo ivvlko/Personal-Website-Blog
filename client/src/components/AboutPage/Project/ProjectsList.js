@@ -9,7 +9,7 @@ import LoggedContext from '../../Auth/LoggedContext';
 const ProjectsList = () => {
 
     const {authenticated} = useContext(LoggedContext)
-    const projectsListEndpoint = 'http://127.0.0.1:8000/api/static/projects/';
+    const projectsListEndpoint = 'http://18.156.33.116:80/api/static/projects/';
     const [projectsList, setProjectsList] = useState([]);
 
     useEffect(() => {

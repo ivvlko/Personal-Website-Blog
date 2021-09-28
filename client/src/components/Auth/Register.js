@@ -2,7 +2,7 @@ import FreeRequests from "../../services/FreeRequests";
 
 const Registration = (props) => {
 
-    const endpoint = 'http://127.0.0.1:8000/auth/registration/';
+    const endpoint = 'http://18.156.33.116:80/auth/registration/';
 
     const submitForm = (e) => {
 

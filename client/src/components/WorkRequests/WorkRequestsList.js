@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import refreshToken from "../Auth/RefreshToken";
 import ErrorPageRights from '../ErrorPages/NoRights';
 
-const workRequestsEndpoint = 'http://127.0.0.1:8000/api/work-requests-list/'
+const workRequestsEndpoint = 'http://18.156.33.116:80/api/work-requests-list/'
 
 const WorkRequestsList = () => {
 

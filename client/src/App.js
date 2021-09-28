@@ -70,10 +70,10 @@ function App() {
 
 
         </Switch>
-
+        <Footer/>
       </LoggedContext.Provider>
 
-      <Footer/>
+      
     </div>
   );
 }

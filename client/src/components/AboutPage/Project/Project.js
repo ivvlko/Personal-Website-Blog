@@ -14,7 +14,7 @@ const Project = (props) => {
        <br/>
        <img src={props.image} className={styles.projectImage} alt="layout"/>
        <br/>
-       <h2>Description: {props.technologies}</h2>
+       <h2>{props.technologies}</h2>
        <br/>
        <h2><a target="_blank" href={props.sourceCode}>Repository: Click </a></h2>
        {(authenticated && localStorage.getItem('username') === 'admin') ?  <NavLink className='EditButton' to={`/edit/projects/${props.id}`}>Edit</NavLink> : null}

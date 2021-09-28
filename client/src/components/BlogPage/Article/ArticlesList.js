@@ -12,7 +12,7 @@ const ArticlesList = () => {
 
     useEffect(() => {
 
-        FreeRequests('GET', 'http://127.0.0.1:8000/api/articles/')
+        FreeRequests('GET', 'http://18.156.33.116:80/api/articles/')
             .then(data => {
                 setArticles(data.reverse())
             })

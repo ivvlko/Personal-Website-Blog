@@ -2,8 +2,11 @@ import React from 'react';
 import { useContext, useState } from 'react';
 import LoggedContext from './LoggedContext';
 import { withRouter } from 'react-router';
+import {useHistory } from 'react-router-dom';
 
-const Login = ({history}) => {
+const Login = () => {
+
+    const history = useHistory();
 
     const { setAuthenticated } = useContext(LoggedContext);
     const handleLogin = () => setAuthenticated(true);
@@ -14,7 +17,7 @@ const Login = ({history}) => {
         let user = e.target[0].value;
         let password = e.target[1].value;
 
-        fetch('http://127.0.0.1:8000/api/token/', {
+        fetch('http://18.156.33.116:80/api/token/', {
             method: 'POST', headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ "username": `${user}`, "password": `${password}` })
         })
@@ -38,7 +41,7 @@ const Login = ({history}) => {
     }
 
     return (
-        <div>
+        <div id="Login">
             <form onSubmit={onSubmitLoginForm} className="GeneralForm">
                 <label htmlFor="username">Username</label>
                 <input type="text" name="username" />

@@ -4,7 +4,7 @@ import AuthorizedCrud from '../../services/AuthorizedCrud';
 const ContactForm = (props) => {
 
     const FontAwesome = require('react-fontawesome');
-    const endpoint = 'http://127.0.0.1:8000/api/work-request/';
+    const endpoint = 'http://18.156.33.116:80/api/work-request/';
 
     const handleSubmit = (e) => {
 

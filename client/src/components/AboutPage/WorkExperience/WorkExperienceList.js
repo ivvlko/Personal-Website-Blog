@@ -8,7 +8,7 @@ import styles from './WorkExperienceList.module.css';
 
 const WorkExperiences = (props) => {
 
-    const endpoint = 'http://127.0.0.1:8000/api/static/work-experience/';
+    const endpoint = 'http://18.156.33.116:80/api/static/work-experience/';
     const {authenticated} = useContext(LoggedContext)
     const [workExperiences, setWorkExperiences] = useState([]);
 

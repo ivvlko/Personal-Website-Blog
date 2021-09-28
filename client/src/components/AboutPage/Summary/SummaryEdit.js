@@ -6,7 +6,7 @@ import FreeRequests from "../../../services/FreeRequests";
 const SummaryEdit = (props) => {
 
     const [summary, setSummary] = useState([]);
-    const endpoint = 'http://127.0.0.1:8000/api/static/summary/2'
+    const endpoint = 'http://18.156.33.116:80/api/static/summary/2'
 
     const [image, setImage] = useState('');
     
