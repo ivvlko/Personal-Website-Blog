@@ -64,5 +64,9 @@
         padding: 0;
         width: 100%;
     }
+
+    .shortDescription{
+        width: 90%;
+    }
     
   }
