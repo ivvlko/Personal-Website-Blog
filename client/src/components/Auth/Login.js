@@ -11,9 +11,11 @@ const Login = () => {
     const { setAuthenticated } = useContext(LoggedContext);
     const handleLogin = () => setAuthenticated(true);
     const [invalidCredentials, setInvalidCredentials] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const onSubmitLoginForm = (e) => {
         e.preventDefault();
+        setLoading(true);
         let user = e.target[0].value;
         let password = e.target[1].value;
 
@@ -31,13 +33,17 @@ const Login = () => {
                 localStorage.setItem('access', data.access);
                 localStorage.setItem('refresh', data.refresh);
                 localStorage.setItem('username', user);
+                setLoading(false);
                 handleLogin()
                 history.push("/");
 
             })
             .catch(err => {
+                setLoading(false);
                 setInvalidCredentials(true);
             })
+
+
     }
 
     return (
@@ -50,6 +56,7 @@ const Login = () => {
                 <input type="password" name="password" />
                 <br/>
                 <input type="submit" value="Login" />
+                <span style={!loading ? {display: 'none'} : {display: 'block'}}>Checking...</span>
             </form>
 
             {invalidCredentials ? <span style={{'color': 'red'}}>Invalid Credentials. Please Try Again.</span> : null}
