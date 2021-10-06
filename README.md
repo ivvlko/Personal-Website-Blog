@@ -1,6 +1,6 @@
 # Personal-Website-Blog
 
-Deployed on [this address](http://18.156.33.116/).
+Can be accessed on [http://ivankoev.ml/](http://ivankoev.ml/).
 
 ## Short Description
 
@@ -23,7 +23,7 @@ React and Custom CSS(mostly with modules styles).
  - Deployed on AWS EC2
  - File storage on AWS S3
  - Django serves React frontend on the same address
- - No domain name at the moment
+ - http://ivankoev.ml/
  
  
 ## Run Locally
