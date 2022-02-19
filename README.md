@@ -1,6 +1,6 @@
 # Personal-Website-Blog
 
-Can be accessed on [http://ivankoev.ml/](http://ivankoev.ml/).
+Can be accessed on [http://www.ivankoev.tk/](http://www.ivankoev.tk/).
 
 ## Short Description
 
