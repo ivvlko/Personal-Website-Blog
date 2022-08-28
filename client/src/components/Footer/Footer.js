@@ -1,4 +1,5 @@
-import 'font-awesome/css/font-awesome.min.css';
+import { faFacebook, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useContext } from 'react';
 import LoggedContext from '../Auth/LoggedContext';
 import { NavLink, useHistory } from 'react-router-dom';
@@ -23,27 +24,15 @@ const Footer = () => {
 
             <div className='fontawesomeIcons'>
                 <a href='https://bg.linkedin.com/in/ivan-koev' target="_blank">
-                    <FontAwesome
-                        className="linkedinIcon"
-                        name='fab fa-linkedin'
-                        size='2x'
-                    />
+                <FontAwesomeIcon icon={faLinkedin} />
                 </a>
 
                 <a href='https://www.facebook.com/iv.ko.7921' target="_blank">
-                    <FontAwesome
-                        className="fbIcon"
-                        name='fab fa-facebook'
-                        size='2x'
-                    />
+                <FontAwesomeIcon icon={faFacebook} />
                 </a>
 
                 <a href='https://github.com/ivvlko' target="_blank">
-                    <FontAwesome
-                        className="fbIcon"
-                        name='fab fa-github'
-                        size='2x'
-                    />
+                <FontAwesomeIcon icon={faGithub} />
                 </a>
             </div>
 

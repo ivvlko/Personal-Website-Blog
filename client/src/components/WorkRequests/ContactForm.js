@@ -1,10 +1,12 @@
 import 'font-awesome/css/font-awesome.min.css';
+import { faFacebook, faGoogle, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import AuthorizedCrud from '../../services/AuthorizedCrud';
 
 const ContactForm = (props) => {
 
     const FontAwesome = require('react-fontawesome');
-    const endpoint = 'http://18.156.33.116:80/api/work-request/';
+    const endpoint = 'http://3.70.84.152:80/api/work-request/';
 
     const handleSubmit = (e) => {
 
@@ -14,9 +16,9 @@ const ContactForm = (props) => {
             'type_of_work': e.target[0].value,
             'short_description': e.target[1].value,
             'expected_to_be_done_until': e.target[2].value,
-            'budget': e.target[3].value,
-            'email': e.target[4].value,
-            'phone_number': e.target[5].value,
+            'budget': 42,
+            'email': e.target[3].value,
+            'phone_number': e.target[4].value,
         })
 
         AuthorizedCrud('POST', endpoint, body)
@@ -55,35 +57,22 @@ const ContactForm = (props) => {
             <div className='formContacts'>
 
                 <a onClick={onClichGmail} style={{color: 'purple'}} target="_blank">
-                    <FontAwesome
-                        className="linkedinIcon"
-                        name='fab fa-google'
-                        size='2x'
-                    />
+                <FontAwesomeIcon icon={faGoogle} />
                 </a>
 
                 <a href='https://bg.linkedin.com/in/ivan-koev' target="_blank">
-                    <FontAwesome
-                        className="linkedinIcon"
-                        name='fab fa-linkedin'
-                        size='2x'
-                    />
+                <FontAwesomeIcon icon={faLinkedin} />
                 </a>
+
+               
+
 
                 <a href='https://www.facebook.com/iv.ko.7921' target="_blank">
-                    <FontAwesome
-                        className="fbIcon"
-                        name='fab fa-facebook'
-                        size='2x'
-                    />
+                <FontAwesomeIcon icon={faFacebook} />
                 </a>
-
+                <i class="fab fa-facebook-square"></i>
                 <a href='https://github.com/ivvlko' target="_blank">
-                    <FontAwesome
-                        className="fbIcon"
-                        name='fab fa-github'
-                        size='2x'
-                    />
+                <FontAwesomeIcon icon={faGithub} />
                 </a>
             </div>
             <h2 style={{textAlign: 'center', marginTop: '50px'}}>Or If You're Ready to Talk Work Directly: </h2>
@@ -106,8 +95,6 @@ const ContactForm = (props) => {
                 <label>Soft Deadline:</label>
                 <input type='date' id='expected_to_be_done_until' />
                 <br />
-                <label>Budger:</label>
-                <input type='number' id='budget'/>
                 <br />
                 <label>Email:</label>
                 <input types='email' id='email' />
